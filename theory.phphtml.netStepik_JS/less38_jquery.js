@@ -64,11 +64,6 @@ $(function () {
     /*23*/
     $('h2').is('h2.test');
 
-
-    alert(123);
-
-
-
     $("p").find("span").css("color", "red");
 });
 
