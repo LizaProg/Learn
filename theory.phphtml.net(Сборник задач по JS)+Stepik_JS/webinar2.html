@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            float: left;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="items">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+<script>
+    window.onload = function () {
+        var items = document.querySelectorAll('.items .item');
+
+        for (var i = 0; i < items.length; i++) {
+            items[i].onclick = function () {
+                fade(this, 1000, function () {
+                    //this – это указание на текущий элемент, по которому был произведён клик.
+                    this.style.display = 'none';
+                })
+            }
+        }
+    };
+
+    function fade(elem, t, f) {
+        //   elem - объект DOM
+        //   t - время анимации
+        //   f - количество кадров в секунду
+
+        var fps = 50;
+        // кадров в секунду (по умолчанию 50)
+        var time = t || 500;
+        // время работы анимации (по умолчанию 500мс)
+        var steps = time / fps;
+        // сколько всего покажем кадров
+        var op = 1;
+        // текущее значение opacity - изначально 0
+        var d0 = op / steps;
+        // изменение прозрачности за 1 кадр
+
+        var callback = f || function () {
+                };
+
+        var timer = setInterval(function () {
+            op -= d0;
+            // уменьшаем текущее значение opacity
+            elem.style.opacity = op;
+            // устанавливаем opacity элементу DOM
+            steps--;
+            // уменьшаем количество оставшихся шагов анимации
+
+            if (steps === 0) {
+                // если анимация окончена
+                clearInterval(timer);
+                callback.call(elem);
+            }
+
+        }, (1000 / fps));
+        //периодичность интервала
+        //1000 / 50 = 20мс – каждые 20 миллисекунд мы должны повторять действия по интервалу.
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

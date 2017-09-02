@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8"/>
+		<title>Форма обратной связи</title>
+		<style type="text/css">
+		form{
+			float: left;			
+		}
+		
+		div{
+			text-align: right;
+			line-height:  20px;
+		}
+		label{
+			float: left;
+			padding-right: 20px;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<h1>Давайте познакомимся</h1>
+		<br/>
+		<form action="">
+			<div>
+				<label>Ваше имя:</label>
+				<input type="text" name="name1"/>
+				<br/>
+			</div>
+			<div>
+				<label>Ваша фамилия:</label>
+				<input type="text" name="name2"/>
+				<br/>
+			</div>
+			<div>
+				<label>Кто вы?</label>
+				<input type="radio" name="r" value="m"/>
+				мужчина
+				<input type="radio" name="r" value="w" checked/>
+				женщина
+			</div>
+			<div>
+				<label>Чем занимаетесь?</label>
+				<select name="s">
+					<option>школьник</option>
+					<option>студент</option>
+					<option>безработный</option>
+					<option>рабочий класс</option>
+					<option>офисный планктон</option>
+					<option>креативный класс</option>
+					<option>интеллигент</option>
+					<option>олигарх</option>
+				</select>
+			</div>
+			<div>
+				<textarea name="txt" cols="45" rows="10">Напишите коротко о себе:</textarea>
+				<br/>
+			</div>
+			<div>
+				<label for="chk">
+					Я не буду воровать записи курсов
+				</label>
+				<input type="checkbox" id="chk" name="ch"/>
+				<br/>
+			</div>
+			<div>
+				<input type="submit" value="Послать отзыв"/>
+				<input type="reset" value="Очистить форму"/>
+				<br/>
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+<div id="div">
+    Блок
+    <p>Абзац</p>
+</div>
+<script type="text/javascript">
+    alert($("#div").html()); //выводит все содержимое документа включая тэги
+    alert($("#div").text()); //выводит только текст
+
+    $("p").html("<p>Новый абзац</p>>"); //заменили "Абзац" на "Новый абзац"
+</script>
+</body>
+</html>

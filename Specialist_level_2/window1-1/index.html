@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function f() {
+            console.log('here');
+        }
+        function n() {
+            var s = '';
+            for (var p in navigator)
+            console.log(p, ":", navigator[p]);
+        }
+        function s() {
+            var m = '';
+            for (var r in screen)
+                console.log(r, ":", screen[r]);
+        }
+    </script>
+</head>
+<body>
+<h1>Объектная модель браузера</h1>
+<div id="demoLinks">
+    <a href="javascript:f()">Click me</a>
+    <a href="javascript:n()">Navigator</a>
+    <a href="javascript:s()">Screen</a>
+</div>
+</body>
+</html>

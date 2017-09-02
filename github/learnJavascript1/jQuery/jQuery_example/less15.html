@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div" style="background-color: #00314F">
+        блок
+        <p>Абзац</p>
+    </div>
+<script type="text/javascript">
+    var block = $("#div").clone(); //клонирует блок
+    block.html("<p>Новый абзац</p>");
+    block.css("font-size", "40px");
+    block.css("width", "200px");
+
+
+    $("body").append(block);
+</script>
+</body>
+</html>

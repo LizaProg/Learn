@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8"/>
+		<title>Использование стилей: float</title>
+		
+		<style>
+		header{
+			background: #ff0000
+		}
+		footer{
+			background: #00ff00; 
+			clear: both;
+		}
+		#left{
+			background: #cc6600;
+			float: right;
+		}
+		#right{
+			background: #ffff00; 
+			float: left;
+		}
+		#left, #right{
+			width: 150px;
+			height: 200px
+		}
+		h1{
+			text-align: center;
+		}
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<header>
+			<h1>HEADER</h1>
+		</header>
+		<section id="left">
+			<h1>LEFT</h1>
+		</section>
+		<section id="right">
+			<h1>RIGHT</h1>
+		</section>
+		<article>
+			<h1>ARTICLE</h1>
+		</article>
+		<footer>
+			<h1>FOOTER</h1>
+		</footer>
+	</body>
+</html>

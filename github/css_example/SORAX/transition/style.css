@@ -1,0 +1,75 @@
+body{
+	background: url(./images/bg.jpg) no-repeat;
+	font: 1em "PT Sans", Tahoma, Arial;
+	text-transform: uppercase;
+}
+.nav{
+	list-style: none;
+	padding: 0;
+	margin: 30px;
+	width: 50px;
+
+}
+.nav li{
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+	-webkit-transition-timing-function: ease-in-out;
+}
+.nav li:hover{
+	width: 200px;
+	height: 175px;
+}
+.nav li a{
+	display: block;
+	height: 40px;
+	width: 200px;
+	line-height: 40px;
+	background: #bbb;
+	margin: 1px;
+	color: #fff;
+	padding-left: 15px;
+	cursor: pointer; 
+
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+	-webkit-transition-timing-function: ease-in-out;
+
+}
+.nav li a:hover{
+	background: #ccddff;
+}
+
+.nav li a:first-child{
+	font-size: 1.1em;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	text-indent: 50px;
+}
+
+.nav li a:first-child::before{
+	content:'';
+	position: absolute;
+	display: block;
+	height: 32px;
+	width: 32px;
+	top: 9px;
+	left: 9px;
+
+}
+
+.main-menu a:first-child::before{
+	background: url(./images/home.png) center no-repeat;
+}
+.setting a:first-child::before{
+	background: url(./images/settings.png) center no-repeat;
+}
+.link a:first-child::before{
+	background: url(./images/link.png) center no-repeat;
+}
+.search a:first-child::before{
+	background: url(./images/search.png) center no-repeat;
+}

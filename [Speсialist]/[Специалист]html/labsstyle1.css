@@ -1,0 +1,44 @@
+body {
+	color: navy;
+	background: #ddd;
+	font-family: Georgia, serif;
+}
+nav a:link {
+	color: green;
+}
+nav a:visited {
+	color: red;
+}
+nav a:hover {
+	background: yellow;
+}
+nav ul {
+	list-style-type: none;
+}
+h1, h3 {
+	color: maroon
+	text-align:center;
+	font-family: Verdana, sans-serif
+}
+body>p;
+
+section p {
+	text-align: justify;
+	text-indent: 15px;
+	line-height: 140%;
+}
+body>p:first-letter {
+	color: maroon;
+	font: 32px Tahoma, sans-serif;
+}
+aside {
+	text-align: right;
+}
+div {
+	text-align: center;
+}
+iframe {
+	width: 830px;
+	height: 220px;
+	border: none;
+}

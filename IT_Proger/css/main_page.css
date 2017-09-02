@@ -1,0 +1,317 @@
+#main {
+    width: 60%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 3%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+#courses {
+    float: left;
+    width: 90%;
+}
+
+.course {
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;
+    color: #646464;
+}
+
+.course > img {
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+    width: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.course > span {
+    float: right;
+    font-weight: bold;
+}
+
+.course > a > .btn {
+    float: left;
+    margin-left: 30%;
+}
+
+#one_course {
+    float: left;
+    margin-top: 10px;
+}
+
+#one_course > img {
+    width: 80%;
+    float: left;
+}
+
+.heading {
+    font-weight: lighter;
+    font-size: 1.4em;
+    font-family: 'Roboto Slab', serif;
+    border-bottom: 2px solid #db6e6e;
+    float: left;
+    color: #4f4f4f;
+    padding: 0px 5px;
+}
+
+.heading:first-letter {
+    color: #db6e6e;
+}
+
+/*стиль для первой буквы*/
+
+#news {
+    margin-left: 10%;
+    width: 90%;
+    float: left;
+}
+
+.article {
+    width: 40%;
+    float: left;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    box-sizing: border-box;
+    min-width: 350px;
+    border-radius: 5px;
+}
+
+.article > img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 100px;
+}
+
+.article > span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3em;
+    width: 80%;
+    margin: 7px 10%;
+    float: left;
+    text-align: center;
+    color: #333;
+}
+
+#news > a > .btn {
+    margin-bottom: 20px;
+    float: left;
+    margin-left: 30%;
+}
+
+/*@media (min-width: 1051px) {
+    #main {
+        width: 60%;
+        margin-left: 3%;
+    }
+
+    aside{
+        width: 30%;
+        margin-left: 2%;
+    }
+
+    #news{
+        margin-left: 10%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1050px) and (min-width: 911px){
+    #main {
+        width: 65%;
+        margin-left: 2%;
+    }
+
+    aside{
+        width: 32%;
+    }
+
+    #news{
+        margin-left: 4%;
+        width: 96%;
+    }
+}
+
+@media (min-width: 910px) and (min-width: 500px){
+    #main {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    aside{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    #news{
+        margin-left: 4%;
+        width: 96%;
+    }
+}
+
+@media (max-width: 499px) {
+    #main {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    aside{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #news{
+        margin-left: 4%;
+        width: 96%;
+    }
+}
+
+@media (min-width: 1220px) {
+    .article {
+        width: 40%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 1219px) and (min-width: 650px){
+    .article {
+        width: 45%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 500px){
+    .article {
+        width: 70%;
+        margin-right: 15%;
+    }
+}
+
+@media (min-width: 499px) {
+    .article{
+        width: 90%;
+        margin-right: 5%;
+    }
+}
+@media (max-width: 600px) {
+    #courses>a>.btn{
+        margin-left: 5%!important;
+    }
+}
+@media (max-width: 440px) {
+    #main>a>.btn{
+        margin-left: 5%!important;
+    }
+}
+/*
+
+/*Нижняя часть*/
+
+#subscribe{
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 911px) {
+    #subscribe{
+        width: 70%;
+    }
+
+    #sub_to_progect{
+        width: 25%;
+    }
+}
+
+@media (max-width: 910px) {
+    #subscribe{
+        width: 100%;
+    }
+
+    #sub_to_progect{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+#subscribe>span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    color: #434343;
+}
+
+#sub_to_progect{
+    float: left;
+    margin-bottom: 20px;
+}
+
+#sub_to_progect>p{
+    width: 100%;
+    color: #333;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1em;
+}
+
+#sub_to_progect>.btn{
+    background-color: #21a7e1;
+    border-bottom-color: #1999d1;
+    float: left;
+    text-align: center;
+}
+
+#web_site{
+    width: 150%;
+    border-top: 2px solid #7d7d7d;
+    position: relative;
+    padding: 1%;
+    background-color: #efefef;
+    text-align: center;
+    min-height: 150px;
+}
+
+#web_site>span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5em;
+    color: #434343;
+}
+
+#web_site>a>.btn{
+    position: absolute;
+    margin: 0;
+    top: 80%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -80%);
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

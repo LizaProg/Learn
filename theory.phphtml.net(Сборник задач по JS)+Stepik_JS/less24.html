@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper {
+            margin: 20px;
+            border: 2px dotted lightgreen;
+        }
+    </style>
+</head>
+<body>
+<!--4-->
+<div class="wrapper">
+    <div id="elem4" class="aaa">Задание 4</div>
+</div>
+<!--5-->
+<div class="wrapper">
+    <div id="elem5" class="cl1 cl2 cl3"></div>
+</div>
+<!--6-->
+<div class="wrapper">
+    <div id="elem6" class="cl1 cl2 cl3 cl4"></div>
+</div>
+<!--7-->
+<div class="wrapper">
+    <div id="elem7">Hi!</div>
+</div>
+<!--10-->
+<div class="wrapper">
+    <div class="www">Привет, это я</div>
+    <div class="www">Привет, это я</div>
+    <div class="www">Привет, это я</div>
+</div>
+<!--11-->
+<div class="wrapper">
+    <ol id="ol"></ol>
+</div>
+<!--12-->
+<div class="wrapper">
+    <ul id="ul"></ul>
+</div>
+<!--13-->
+<div class="wrapper">
+    <ul id="ul13"></ul>
+</div>
+<!--14-->
+<div class="wrapper">
+    <ul id="ul14">
+        <li id="li14">Hi! Im li(#li14)</li>
+    </ul>
+</div>
+<!--15 - 18-->
+<div class="wrapper">
+    <strong id="elemBasic">Im BASIC element!</strong>
+</div>
+
+<!--19-21-->
+<ol id="parent">
+    <li>Point 1</li>
+    <li>Point 2</li>
+    <li>Point 3</li>
+    <li>Point 4</li>
+    <li>Point 5</li>
+</ol>
+<!--24-->
+<ul>
+    <li id="basicEl">Point 1</li>
+    <li>Point 2</li>
+    <li>Point 3</li>
+    <li>Point 4</li>
+</ul>
+<!--25-->
+<div class="wrapper">
+    <p>Текст родителя <span id="elem25">потомок</span></p>
+</div>
+
+<!--26-->
+<div class="wrapper">
+    <span>С другой стороны постоянный <strong>количественный рост и сфера нашей <u id="child26">активности</u> </strong>требуют от нас анализа форм развития.</span>
+</div>
+<!--27-->
+<div class="wrapper">
+    <p id="parent27">Таким образом укрепление и развитие структуры играет важную роль в формировании <strong
+            id="child27">дальнейших направлений развития.</strong></p>
+    <button id="button27">Push</button>
+</div>
+<!--28-->
+<div class="wrapper">
+    <ol id="ol28">
+        <li>qi</li>
+        <li>ni</li>
+        <li>ui</li>
+    </ol>
+    <button onclick="button28()">push</button>
+</div>
+<!--29-->
+<div class="wrapper">
+    <ul id="ul29">
+        <li class="li29">kflr</li>
+        <li class="li29">rfe</li>
+        <li class="li29">wgt43</li>
+        <li class="li29">f34</li>
+        <li class="li29">7j</li>
+    </ul>
+</div>
+
+<!--30-->
+<button id="buttonClone" onclick="cloneButton()">Clone it!</button>
+<br><br>
+<input type="text" id="inputClone">
+</body>
+<script>
+    /*4*/
+    var elem4 = document.getElementById('elem4');
+    elem4.classList.toggle('www');
+
+    /*5*/
+    var elem5 = document.getElementById('elem5');
+    var el5 = document.getElementById('elem5');
+    el5.innerHTML = elem5.classList.length;
+
+    /*6*/
+    /*  var elem6 = document.getElementById('elem6');
+     for (var i = 0; i < elem6.classList.length; i++) {
+     alert(elem6.classList[i]);
+     }*/
+    /*7*/
+    var elem7 = document.getElementById('elem7');
+    elem7.style.cssText = 'color: red; font-size: 30px; border: solid 1px black;';
+
+    /*10*/
+    var elem10 = document.getElementsByClassName('www');
+    for (var i = 0; i < elem10.length; i++) {
+        elem10[i].innerHTML = elem10[i].innerHTML + " " + elem10[i].tagName.toLowerCase();
+    }
+    /*11*/
+    var ol = document.getElementById('ol');
+    var li = document.createElement('li');
+    li.innerHTML = 'пункт';
+    ol.appendChild(li);
+
+    /*12*/
+    var ul = document.getElementById('ul');
+    var array = ['Привет', 'Hello', 'Bonjour'];
+    for (var j = 0; j < array.length; j++) {
+        var li12 = document.createElement('li');
+        li12.innerHTML = array[j];
+        ul.appendChild(li12);
+    }
+
+    /*13*/
+    var ul13 = document.getElementById('ul13');
+    var array13 = ['lorem', 'ipsum', 'dolores', '...'];
+    for (var q = 0; q < array13.length; q++) {
+        var li13 = document.createElement('li');
+        li13.innerHTML = array13[q];
+        ul13.appendChild(li13).addEventListener('click', textCreate);
+    }
+    function textCreate() {
+        alert(this.innerHTML);
+    }
+
+    /*14*/
+    var ul14 = document.getElementById('ul14');
+    var li14 = document.getElementById('li14');
+
+    var newLi = document.createElement('li');
+    newLi.innerHTML = '!!! Im li added !!!';
+    ul14.insertBefore(newLi, li14); //(элемент, перед чем вставить)
+
+    /*15 - 18*/
+    var basic = document.getElementById('elemBasic');
+    basic.insertAdjacentHTML('beforeBegin', '<p>added beforeBegin</p>');
+    basic.insertAdjacentHTML('afterEnd', '<p>added afterEnd</p>');
+    basic.insertAdjacentHTML('afterBegin', '<p>added afterBegin</p>');
+    basic.insertAdjacentHTML('beforeEnd', '<p>added beforeEnd</p>');
+
+    /*19-21*/
+    var parent = document.getElementById('parent');
+    parent.firstElementChild.innerHTML += ' im first Element Child';
+    parent.firstElementChild.style.color = 'red';
+    parent.lastElementChild.innerHTML += ' im last Element Child';
+    parent.lastElementChild.style.color = 'brown';
+    for (var e = 0; e < parent.children.length; e++) {
+        parent.children[e].innerHTML += ' !';
+    }
+
+    /*24*/
+    var parent24 = document.getElementById('basicEl');
+    var neighbor = parent24.nextElementSibling.nextElementSibling;
+    neighbor.innerHTML += '!';
+
+    /*25*/
+    var elem25 = document.getElementById('elem25');
+    elem25.parentElement.style.color = 'red';
+
+    /*26*/
+    var child26 = document.getElementById('child26');
+    child26.parentElement.parentElement.style.color = 'red';
+
+    /*27*/
+    var button27 = document.getElementById('button27');
+    button27.addEventListener('click', funcRemove);
+
+    function funcRemove() {
+        var parent27 = document.getElementById('parent27');
+        var child27 = document.getElementById('child27');
+        parent27.removeChild(child27);
+    }
+
+    /*28*/
+    function button28() {
+        var ol = document.getElementById('ol28');
+        var lastChild = ol.lastElementChild;
+        ol.removeChild(lastChild);
+    }
+
+    /*29*/
+    var li29 = document.getElementsByClassName('li29');
+        for (var b = 0; b < li29.length; b++){
+        li29[b].addEventListener('click', funcRemove29);
+    }
+    function funcRemove29() {
+        this.parentElement.removeChild(this);
+    }
+
+    /*30*/
+    var inputCl = document.getElementById('inputClone');
+
+    function cloneButton() {
+        var clone = inputCl.cloneNode(true);
+        inputCl.parentElement.appendChild(clone);
+    }
+
+
+
+</script>
+</html>

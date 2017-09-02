@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--из массива var peoples = "Иванов Иван Иванович тел. 8(495)256-32-56 г.МСК; Петров Петр Петович тел. 8(495)256-33-21" г.МСК; Сидоров Сидр Сидорович тел.8(3842)54-71-86 г.Кемерово" получить московские номера телефона-->
+
+<script>
+    var peoples = ["Иванов Иван Иванович тел. 8(495)256-32-56 г.МСК", "Петров Петр Петович тел. 8(495)256-33-21 г.МСК", "Сидоров Сидр Сидорович тел.8(3842)54-71-86 г.Кемерово"];
+    var regEx = /8\(495\)\d{3}-\d{2}-\d{2}/g;
+    for (var i = 0; i < peoples.length; i++) {
+        var res = peoples[i].match(regEx);
+        if (res != null) {
+            for (var j = 0; j < res.length; j++) {
+                document.write(res[j] + "<br>");
+            }
+        }
+    }
+</script>
+</body>
+</html>

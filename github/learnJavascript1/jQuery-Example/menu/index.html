@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<nav>
+    <a href="#" class="menu-trigger">menu</a>
+    <ul>
+        <li><a href="#">link-1</a> </li>
+        <li><a href="#">link-2</a></li>
+        <li><a href="#">link-3</a></li>
+        <li><a href="#">link-4</a></li>
+        <li><a href="#">link-5</a></li>
+    </ul>
+</nav>
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.menu-trigger').click(function()
+        //при клике на класс menu-trigger запустить функцию
+        {
+            $('nav ul').slideToggle(500);
+            //выбираем меню,метод slideToggle раскрывает меню (продолжит эффекта)
+        });//end slide toggle
+
+        $(window).resize(function()
+        //при изменении размеров окна запустить функцию:
+        {
+            if (  $(window).width() > 500 )
+            //если ширина окна больше 500 px
+            {
+                $('nav ul').removeAttr('style');
+                //убираем атриб style у эл nav ul
+            }
+        });//end resize
+    });//end ready
+</script>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script src="less30.js"></script>-->
+    <style>
+        .task {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+<!--3-->
+<div class="task">Task 3</div>
+<input type="text" placeholder="Enter number" id="input3">
+<div id="result3"></div>
+<br>
+
+<!--6-->
+<div class="task">Task 6</div>
+<input type="text" id="inputFIO" placeholder="enter your full name"><br><br>
+
+<!--7-->
+<div class="task">Task 7</div>
+<input type="text" id="inputTxt" placeholder="enter few words">
+<div id="hoWords"></div>
+<br><br>
+
+<!--8-->
+<div class="task">Task 8</div>
+<input type="text" id="input8" placeholder="enter few words">
+<div id="longWords"></div>
+<br><br>
+
+<!--10-->
+<div class="task">Task 10</div>
+<input type="text" id="input10" placeholder="enter your year of birth">
+<button id="btnHowYears">How old am</button>
+<div id="howYears"></div>
+<br><br>
+
+<!--13-->
+<div class="task">Task 13</div>
+<input type="text" id="input13" placeholder="enter any number">
+<div id="res13"></div>
+<br><br>
+
+<!--15-->
+<div class="task">Task 15</div>
+<div class="divNum">1023</div>
+<div class="divNum">0</div>
+<div class="divNum">58</div>
+<div class="divNum">38</div>
+<div class="divNum">487</div>
+<button id="btn15">Push</button>
+<input type="text" id="result15"><br><br>
+
+<script>
+    /*15*/
+    var btn15 = document.getElementById('btn15');
+    btn15.addEventListener('click', func15);
+
+
+    var nArray = [];
+    var res15 = document.getElementById('result15');
+
+    function func15() {
+        var div = document.getElementsByClassName('divNum');
+        for (var i = 0; i < div.length; i++) {
+            var elDiv = parseInt(div[i].innerHTML);
+            nArray.push(elDiv); //в nArray лежит массив с числами
+        }
+        nArray.sort(sortNum);
+        var joinElDiv = nArray.join(', ');
+        res15.value = joinElDiv;
+    }
+
+    function sortNum(a, b) {
+        if (a > b) return 1;
+        if (a < b) return -1;
+    }
+</script>
+
+<!--22-->
+<div class="task">Task 22</div>
+<input id="plus" type="submit" value="+">
+<input id="number" type="text" value="1">
+<input id="minus" type="submit" value="-"> <br><br>
+
+
+</body>
+<script>
+    /*3*/
+    var input = document.getElementById('input3');
+    input.addEventListener('blur', func3);
+    var result = document.getElementById('result3');
+
+    function func3() {
+        var inputValue = input.value;
+        var arrayInput = inputValue.split('');
+        var sum = 0;
+        for (var i = 0; i < arrayInput.length; i++) {
+            sum += Number(arrayInput[i]);
+        }
+        result.innerHTML = sum;
+    }
+
+    /*6*/
+    var inputFIO = document.getElementById('inputFIO');
+    inputFIO.addEventListener('blur', nameFirstBig);
+
+    function createBig(str)
+    //сюда придет все имя 'иванов иван иванович'
+    {
+        var array = str.split(' '); //из строки массив (разбиваем по пробелу)
+        for (var i = 0; i < array.length; i++) {
+            array[i] = array[i].split(''); //текущий эл-т массива 'иван' разбить каждую буковку
+            array[i][0] = array[i][0].toUpperCase(); //первый эл-т массива 'и''в''а''н' сделать большую буквку
+            array[i] = array[i].join(''); //объединяет все элементы массива 'Иван';
+        }
+        str = array.join(' ');
+        return str;
+    }
+    function nameFirstBig() {
+        inputFIO.value = createBig(inputFIO.value);
+    }
+
+    /*7*/
+    var inputTxt = document.getElementById('inputTxt');
+    inputTxt.addEventListener('blur', discoverWords);
+
+    function discoverWords() {
+        var inpTxtVal = inputTxt.value;
+        var arrTxt = inpTxtVal.split(' ');
+        var sum = 0;
+        for (var i = 0; i < arrTxt.length; i++) {
+            sum += 1;
+        }
+        var res7 = document.getElementById('hoWords');
+        res7.innerHTML = 'in this text ' + sum + ' words';
+    }
+
+    /*8*/
+    var inputLong = document.getElementById('input8');
+    inputLong.addEventListener('blur', checkLong);
+
+    function checkLong() {
+        var longVal = inputLong.value;
+        var arrLong = longVal.split(' ');
+        var max = arrLong[0].length;
+
+        for (var i = 1; i < arrLong.length; i++) {
+            if (arrLong[i].length > max) {
+                max = arrLong[i].length;
+            }
+        }
+        document.getElementById('longWords').innerHTML = max;
+    }
+
+    /*10*/
+    var btnHowYears = document.getElementById('btnHowYears');
+    btnHowYears.addEventListener('click', funcHow);
+    var resHowOld = document.getElementById('howYears');
+
+    function funcHow() {
+        var input10 = document.getElementById('input10');
+        var birthUser = input10.value;
+        var date = new Date();
+        var nowYear = date.getFullYear();
+        resHowOld.innerHTML = 'Now you ' + (nowYear - birthUser) + ' old';
+    }
+
+
+    /*13*/
+    var input13 = document.getElementById('input13');
+    input13.addEventListener('blur', funcNum3);
+
+    function funcNum3() {
+        var userNumber = input13.value;
+        var arrUserNum = userNumber.split('');
+        var res13 = document.getElementById('res13');
+        var contains = false;
+        for (var i = 0; i < arrUserNum.length; i++) {
+            if (arrUserNum[i] == '3') {
+                contains = true;
+                break;
+            }
+        }
+        if (contains == true) {
+            res13.innerHTML = '+';
+        } else {
+            res13.innerHTML = '-';
+        }
+    }
+
+
+    /*22*/
+    var pl = document.getElementById('plus');
+    pl.addEventListener('click', funcPlus);
+
+    var min = document.getElementById('minus');
+    min.addEventListener('click', funcMinus);
+
+    var inp = document.getElementById('number');
+
+    function funcPlus() {
+        inp.value = parseInt(inp.value) + 1;
+    }
+
+    function funcMinus() {
+        if (parseInt(inp.value) <= 0) {
+            alert('The number can not be less than "0"')
+        } else {
+            inp.value = parseInt(inp.value) - 1;
+        }
+    }
+
+    /*простое/составное*/
+
+    function simple(num) {
+        var numSimp = true;
+        for(var i = 2; i <= num-1; i++){
+            if(num % i == 0){
+                numSimp = false;
+                break;
+            }
+        }
+        if(numSimp == true){
+            console.log('Number is simply');
+        }else {
+            console.log('Number is compound');
+        }
+    }
+    simple(198);
+
+
+</script>
+</html>

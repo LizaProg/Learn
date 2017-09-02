@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .my-class {
+            color: red;
+        }
+        .new-class{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div id="my-class" class="my-class">Абзац с class="my-class". Класс задает красный цвет.</div>
+<button id="buttonClass" onclick="buttonClass()">Нажми и я выведу класс абзаца</button>
+<br><br>
+<button id="removeClass" onclick="removeClass()">Нажми и я удалю класс my-class</button>
+<br> <br>
+<!---->
+<div id="myDiv" class="my-class class">Абзац с class="my-class class". Класс "my-class" задает красный цвет.</div>
+<br>
+<button onclick="classMyDiv()">Нажми чтобы узнать класс абзаца</button>
+<br> <br>
+<button onclick="removeMyClass()">Нажми и я изменю название класса</button>
+
+</body>
+<script>
+    function buttonClass() {
+        var classDiv = document.getElementById('my-class');
+        alert(classDiv.getAttribute('class'));
+    }
+    function removeClass() {
+        var classDiv = document.getElementById('my-class');
+        classDiv.removeAttribute('class');
+        alert('Класс удален! Нажмите на первую кнопку чтобы проверить это!')
+    }
+    function classMyDiv() {
+        var myClass = document.getElementById('myDiv');
+        alert(myClass.getAttribute('class'));
+    }
+    function removeMyClass() {
+        var myClass = document.getElementById('myDiv');
+        myClass.setAttribute('class', 'new-class');
+        myClass.innerHTML = 'Абзац с новым классом "new-class". Класс "new-class" задает голубой цвет.';
+        alert('Класс изменен! Чтобы узнаь название нового класса нажмите первую кнопку!');
+    }
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery-3.1.1.min (1).js"></script>
+    <title>Изучаем jQuery</title>
+    <script>
+        $(function(){
+
+        console.log('jQuery работает');
+
+    });
+    </script>
+</head>
+<style>
+    html, body{
+        padding:0;
+        margin:0;
+        height:100%;
+        position:relative;
+    }
+    /* Header */
+
+    #header {
+        background-color: red;
+        height: 100px;
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Content */
+
+    #wrapper{
+        background:#CCC;
+        min-height:100%;
+        margin: 0 auto;
+        width: 900px;
+    }
+    #content{
+        float: left;
+        width: 700px;
+    }
+    #clear{
+        clear: both;
+        height: 50px;
+    }
+
+    /* Footer */
+
+    #footer{
+        background:#36F;
+        height:50px;
+        margin: 0 auto;
+        width: 900px;
+        margin-top:-50px;
+        position:relative;
+    }
+</style>
+<body>
+<div id="wrapper">
+    <div id="header">Header</div>
+    <div id="content">
+        Content
+    </div>
+    <div id="sidebar">Sidebar</div>
+    <div id="clear"></div>
+</div>
+<div id="footer">
+    Footer
+</div>
+</body>
+</html>
