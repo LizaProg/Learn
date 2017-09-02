@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #elem1, #elem2, #elem5, #elem22 {
+            width: 150px;
+            height: 50px;
+            border: 10px solid cornflowerblue;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .lorem {
+            width: 250px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--1,2-->
+<div id="elem1"></div>
+<!--3, 4-->
+<div id="elem2">
+    <button onclick="btn2()">Push</button>
+</div>
+<!--5, 6-->
+<div id="elem5">
+    <button onclick="btn5()">Push</button>
+</div>
+
+<!--19, 20-->
+<button onclick="scrollToDown()">Scroll Page</button>
+<div class="lorem">
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium aperiam aut, autem dicta
+        distinctio dolores, ex fuga obcaecati provident, quisquam quod ratione recusandae similique sit vel vero
+        voluptas voluptatum.
+    </div>
+    <div>Illo ipsa iusto odio perspiciatis veniam. Animi commodi culpa esse fugit molestias necessitatibus repellendus
+        rerum suscipit! Dicta exercitationem in itaque, laboriosam maxime molestias mollitia natus nobis omnis, pariatur
+        unde voluptatum.
+    </div>
+</div>
+<!--22-->
+<div id="elem22"></div>
+
+</body>
+<script>
+    /*1, 2*/
+    var elem1 = document.getElementById('elem1');
+    elem1.innerHTML = 'clientTop = ' + elem1.clientTop + '<br>' + 'clientLeft = ' + elem1.clientLeft;
+
+    /*3, 4*/
+    function btn2() {
+        var elem2 = document.getElementById('elem2');
+        elem2.innerHTML = 'offsetWidth = ' + elem2.offsetWidth + '<br>' + 'offsetHeight = ' + elem2.offsetHeight
+    }
+    //offsetWidth = border-left + padding-left + width + padding-right + border-right
+    //offsetHeight = border-top + padding-top + height + padding-bottom + border-bottom
+
+    /*5,6*/
+    function btn5() {
+        var elem5 = document.getElementById('elem5');
+        elem5.innerHTML = elem5.clientWidth + '<br>' + elem5.clientHeight;
+    }
+    //clientWidth = padding-left + width + padding-right
+    //clientHeight = padding-top + height + padding-bottom
+
+
+    /*19 - 21*/
+    function scrollToDown() {
+        var lorem = document.getElementsByClassName('lorem');
+        window.scrollTo(0, lorem.clientHeight);
+        //document.body.scrollTop = document.body.scrollHeight; /*19*/
+
+
+        // window.scrollBy(0, 100); /*20*/
+
+        /*var win = document.body;
+         if(win.clientHeight + win.scrollTop == win.scrollHeight){
+         win.scrollTo(0, 100);
+         }else {
+         alert('Дочитайте до конца')
+         }*/
+
+    }
+
+    /*22*/
+    var el22 = document.getElementById('elem22');
+    el22.addEventListener('click', overSize);
+
+    function overSize() {
+        /*var styleEl = getComputedStyle(el22);
+         var widhtEl = styleEl.width;
+         var heidthEl = styleEl.height;
+
+         el22.style.width = widhtEl*2 + 'px';
+         el22.style.height = heidthEl *2 + 'px';*/
+
+        var widhtEl = el22.offsetWidth;
+        var heightEl = el22.offsetHeight;
+        el22.style.width = widhtEl * 2 + 'px';
+        el22.style.height = heightEl * 2 + 'px';
+
+    }
+</script>
+</html>

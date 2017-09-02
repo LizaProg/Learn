@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Ваша задача написать функцию, которая принимает два параметра.
+1. Массив, состоящий из чисел с дробями.
+2. Метод округления "round", "ceil" или "floor".
+
+На выходе функция должна выводить этот же массив, но при этом все элементы массива,
+должны быть округлены с помощью указанного во втором параметре метода объекта Math.
+
+Исходный массив:
+var numberArray = [34.82, 12.90, 17.01, 78.51];-->
+
+<script>
+    var numberArray = [34.82, 12.90, 17.01, 78.51];
+    var round = ("ceil");
+
+    function changeRound(array, method) {
+        if (method == "round"){
+            for(var i = 0; i < array.length; i++){
+                array[i] = Math.round(array[i]);
+                document.write(array[i] + "<br>");
+            }
+        } else if (method == "ceil"){
+            for (var i = 0; i < array.length; i++){
+                array[i] = Math.ceil(array[i]);
+                document.write(array[i] + "<br>");
+            }
+        } else if (method == "floor"){
+            for (var i = 0; i < array.length; i++){
+                array[i] = Math.floor(array[i]);
+                document.write(array[i] + "<br>");
+            }
+        } else {
+            document.write("Вы ввели некорректный метод!");
+        }
+    }
+    changeRound(numberArray, round)
+</script>
+</body>
+</html>

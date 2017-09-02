@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--У вас есть массив: var students = ["Илья","Greg", "Алина"];
+Вам надо пройтись по каждому элементу этого массива и выяснить в каком элементе массива есть буквы,
+которые не попадают в диапазон русских букв.
+
+Подсказка. При решении нужно использовать цикл внутри цикла.
+В первом цикле вы перебираете элементы массива, а во внутреннем цикле уже каждый символ
+текущего элемента массива. Для внутреннего цикла можете назвать счетчик var j = 0;-->
+
+<script>
+    var students = ["Илья", "Greg", "Алина", "Oлeg"];
+    for (var i = 0; i < students.length; i++) {
+        for (var j = 0; j < students[i].length; j++) {
+            //"А".charCodeAt(0) русской буквы А
+            if (
+                    students[i].charCodeAt(j) < "А".charCodeAt(0) ||
+                    students[i].charCodeAt(j) > "я".charCodeAt(0)
+            ) {
+                document.write("Найден символ, который не попадает в диапазон русских букв. Это символ: <strong>" + students[i].charAt(j) + "</strong> в элементе: " + students[i] + "<br />");
+            }
+        }
+    }
+
+    /*//как узнать номер русских символов
+     var rusLetters = "аяАЯ";
+     document.write(rusLetters.charCodeAt(0) + "<br>");
+     document.write(rusLetters.charCodeAt(1) + "<br>");
+     document.write(rusLetters.charCodeAt(2) + "<br>");
+     document.write(rusLetters.charCodeAt(3) + "<br>");
+     //берем значение меньшее и большее (1040 и 1103)*/
+</script>
+</body>
+</html>

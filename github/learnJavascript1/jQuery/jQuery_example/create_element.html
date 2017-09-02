@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <div>Блок</div>
+
+
+    <script type="text/javascript">
+        $("<p>Text</p>").appendTo("div"); //добаляем текст в конец div
+        $("<p>Text</p>").prependTo("div"); //добаляем текст в начало div
+        $("<p>Insert Before</p>").insertBefore("div"); //добаляем текст перед div
+        $("<p>Insert After</p>").insertAfter("div"); //добаляем текст после div
+
+    </script>
+
+</body>
+</html>

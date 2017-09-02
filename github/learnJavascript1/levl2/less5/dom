@@ -1,0 +1,62 @@
+node - узел элемнета
+Свойства
+parentNode //ссылка на родительский документ
+childNodes //коллекция детей
+firstChild //первый ребенок
+lastChild // последний ребенок
+nextSibling //следующий или предыдущий(лево право)
+previousSibling // возвращает узел предшедствующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе.
+ownerDocument //сам документ
+nodeName  //возвращает имя тэга для элемента
+nodeType // возвращает тип узла(цифру указ в таблице)
+nodeValue //для текствого узла (возвращает сам текст)
+
+
+Методы
+hasChildNodes() (у тебя есть дети? возвращается true false)
+cloneNode(bool)
+appendChild(e)
+insertBefore(e, p)
+replaceChild(e, p)
+removeChild(e)
+
+
+
+element - элемент документа
+Свойства Node
++
+tagName (то же самое что и nodeName)
+
+
+Методы
+Методы Node
++
+getElementsByTagName(t)((средствo поиска элемента)выбирает все узлы ниже с именем тэга)
+hasAttribute(a) //проверяет наличие атрибута
+getAttribute(a) //получает значение атрибута
+setAttribute(a, v) //устанавливает атрибут
+removeAttribute(a) //удаляет атрибут
+
+
+/* Интерфейс Document*/
+
+Свойства Node
++
+documentElement //ищет корневой элемент в документе (html выше и ниже этого элта нет ничего)
+body //выбирает body
+styleSheets //
+doctype
+
+Методы Node
++
+getElementsByTagName(e)
+getElementById(id)
+другие
+
+
+/*создание узлов*/
+Методы интерфейса Document
+ createElement(element_name)
+ createTextNode(string)
+ createDocumentFragment()
+ createComment(string)

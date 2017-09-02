@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Программа сложения двух чисел</title>
+</head>
+<body>
+<script>
+    function sum() {
+        //найти поля в которые писать числа
+        //из строки перевели в числа
+        var a = parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        if (isNaN(a) || isNaN(b)) {
+            alert("Введите числа!");
+        }else {
+            //сложить их
+            var c = a + b;
+            //найти куда писать результат, вставть сумму
+            document.getElementById('result').innerHTML = a + " + " + b + " = " + c;
+        }
+    }
+
+
+</script>
+<form>
+    <input id="a" type="text" value=" "><br>
+    <input id="b" type="text" value=" "><br>
+    <input type="button" value="Сложить 2 два числа" onclick="sum();"><br>
+</form>
+<div id="result"></div>
+</body>
+</html>

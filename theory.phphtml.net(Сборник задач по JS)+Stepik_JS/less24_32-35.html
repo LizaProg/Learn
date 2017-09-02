@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--32-->
+<span id="addList"></span>
+
+<!--33-->
+<input type="text" id="inputClone"><button id="buttonClone" onclick="cloneButton()">+</button>
+
+<!--34-->
+<input type="text" id="input34" onblur="addOtherInput()"><br><br>
+
+<!--35-->
+<p>
+    <input placeholder="я родитель" type="text">
+    <button id="removeBtn" onclick="removeParent()">Remove Parent</button>
+</p>
+</body>
+<script>
+    /*32*/
+    var array32 = ['lesson32', 'lorem', 'ipsum', 'dolores', 'sie', 'amet', 'lesson32'];
+    var createUl = document.createElement('ul');
+    var addList = document.getElementById('addList');
+    for (var i = 0; i < array32.length; i++) {
+        var li = document.createElement('li');
+        li.innerHTML = array32[i];
+        createUl.appendChild(li);
+    }
+    addList.appendChild(createUl);//для того чтобы записать в конец страницы(document.body.appendChild(createUl))
+
+    /*33*/
+    var inputCl = document.getElementById('inputClone');
+
+    function cloneButton() {
+        var br = document.createElement('br');
+        inputCl.parentElement.appendChild(br);
+        var clone = inputCl.cloneNode(true);
+        inputCl.parentElement.appendChild(clone);
+    }
+
+    /*34*/
+    function addOtherInput() {
+        var input = document.getElementById('input34');
+        var inputDigit = input.value;
+        var arrayDigit = inputDigit.split('');
+
+        for(var i = 0; i < arrayDigit.length; i++){
+            var tagBr = document.createElement('br');
+            input.parentElement.appendChild(tagBr);
+            var inputForDigit = document.createElement('input');
+            inputForDigit.value = arrayDigit[i];
+            input.parentElement.appendChild(inputForDigit);
+        }
+
+    }
+
+    /*35*/
+    function removeParent() {
+        var btn = document.getElementById('removeBtn');
+
+        btn.parentElement.style.visibility = 'hidden';
+        btn.style.visibility = 'visible';
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .task {
+            color: brown;
+        }
+
+        .maxP {
+            color: red;
+        }
+
+    </style>
+</head>
+<body onload="funcFor27()">
+<!--24-->
+<div class="task">Task 24</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae expedita perferendis similique tenetur veniam.
+    Commodi cumque deserunt facere tempore voluptas.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor enim illum maiores voluptates. Animi beatae
+    consequatur ex harum impedit ipsa, iste molestiae placeat quis, quisquam sint tempora ut voluptates. Sequi.</p>
+<input type="text" id="mark">
+<script>
+    var inputMark = document.getElementById('mark');
+    document.documentElement.addEventListener('mouseup', func24);
+
+    function func24() {
+        var content = window.getSelection().toString();
+        inputMark.value = content;
+    }
+</script>
+
+<!--25-->
+<div class="task">Task 25</div>
+<p class="mbMax">15</p>
+<p class="mbMax">40</p>
+<p class="mbMax">522</p>
+<p class="mbMax">8</p>
+<p class="mbMax">1025</p>
+<button id="btn25">Push</button>
+<br><br>
+
+<script>
+    var btnMax = document.getElementById('btn25');
+    btnMax.addEventListener('click', funcMaxRed);
+    var newArrayP = [];
+
+    function funcMaxRed() {
+        var allP = document.getElementsByClassName('mbMax');
+
+        for (var i = 0; i < allP.length; i++) {
+            var elP = parseInt(allP[i].innerHTML);
+            newArrayP.push(elP);
+        }
+
+        var maxP = newArrayP[0];
+
+        for (var j = 0; j < newArrayP.length; j++) {
+            if (newArrayP[j] > maxP) {
+                maxP = newArrayP[j];
+            }
+        }
+    }
+</script>
+
+<!--26-->
+<div class="task">Task 26</div>
+<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur corporis dignissimos
+    dolores impedit in ipsam reiciendis. Error ex laborum laudantium nemo, saepe voluptas voluptatum!</p>
+<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus fugiat libero nemo nisi similique
+    tenetur! Culpa debitis ipsam laborum maxime, nemo nesciunt, nihil possimus praesentium sapiente sed totam veritatis?
+    Ab asperiores, dolorem id in iure quae quia ratione rerum similique voluptatum. Architecto aspernatur assumenda
+    consectetur, cum cupiditate explicabo ipsa maxime molestiae nihil officia omnis, optio pariatur veniam?</p>
+<input type="text" id="input26" placeholder="how much push to text"> <br><br>
+<script>
+    var text26 = document.getElementsByClassName('text');
+    for (var i = 0; i < text26.length; i++) {
+        text26[i].addEventListener('click', func26);
+    }
+
+    var res = 0;
+    function func26() {
+        var input26 = document.getElementById('input26');
+        res++;
+        input26.value = res;
+    }
+</script>
+
+
+<!--27-->
+<div class="task">Task 27</div>
+<input id="input27" type="text" value="2"><br><br>
+
+<script>
+    /* var input27 = document.getElementById('input27');
+
+     function funcFor27() {
+     window.setInterval(numSquare, 1000);
+     }
+
+     function numSquare(){
+     input27.value = Math.pow(input27.value, 2);
+     }*/
+</script>
+
+<!--28-->
+<div class="task">Task 28</div>
+<input type="text" id="input28">
+<button id="btn28">Generation</button>
+<br><br>
+
+<script>
+    var btn28 = document.getElementById('btn28');
+    var input28 = document.getElementById('input28');
+
+    btn28.addEventListener('click', funcGener);
+
+    function funcGener() {
+        input28.value = randomInteger(10000000, 99999999);
+    }
+
+    function randomInteger(min, max) {
+        var rand = min + Math.random() * (max + 1 - min);
+        rand = Math.floor(rand);
+        return rand;
+    }
+</script>
+
+<!--33-->
+<div class="task">Task 33</div>
+<p id="text33">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam distinctio illum modi molestias nisi
+    obcaecati provident voluptates. Iste quia, sunt.</p>
+<br><br>
+
+<script>
+    var text33 = document.getElementById('text33');
+    var arr = ['aqua', 'coral', 'crimson', 'hotPink', 'indigo'];
+    var count = 0;
+    window.setInterval(func33, 3000);
+
+    function func33() {
+        text33.style.color = arr[count];
+        count++;
+        if (count > arr.length) {
+            count = 0;
+        }
+    }
+</script>
+
+<!--35-->
+<div class="task">Task 35</div>
+<input type="text" class="num35"><br>
+<input type="text" class="num35"><br>
+<input type="text" class="num35"><br><br>
+
+<script>
+    var inp = document.getElementsByClassName('num35');
+    window.setInterval(numInInput, 500);
+    var numInp = 1;
+    var cnt = 0;
+
+    function numInInput() {
+        /*for (var i = 0; i < inp.length; i++) {
+            inp[i].value = numInp;
+            numInp++;
+        }*/
+
+        inp[cnt].value = numInp;
+        numInp++;
+        cnt++;
+
+        if(cnt >= inp.length){
+            cnt = 0;
+        }
+    }
+</script>
+
+<!--39-->
+<input type="radio" class="radio" value="JavaScript">JavaScript<br>
+<input type="radio" class="radio" value="Java">Java<br>
+<input type="radio" class="radio" value="1C">1C<br>
+<input type="radio" class="radio" value="PHP">PHP<br>
+<input type="radio" class="radio" value="Dolfin">Dolfin<br>
+<p>You know the programming language:<span id="userKnow"></span></p><br><br>
+
+<script>
+    var radioBtn = document.getElementsByClassName('radio');
+    var array = [];
+    var result = document.getElementById('userKnow');
+
+    for(var i = 0; i < radioBtn.length; i++){
+        radioBtn[i].addEventListener('change', func39);
+    }
+
+    function func39() {
+        if(this.checked){
+            array.push(this.value);
+            result.innerHTML = array;
+        }
+    }
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

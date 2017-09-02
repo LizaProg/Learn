@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #mouseOut{
+            height: 150px;
+            width: 150px;
+            border: 1px solid red;
+        }
+        #img{
+            width: 50px;
+            height: 50px;
+        }
+        #foto1{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<!--1-->
+<input type="button" onclick="buttonClick0()" value="Нажми"><br>
+<!--end-->
+<!--2-->
+<input type="button" onmouseover="buttonClick1()" value="Наведи мышечку" id="button1"><br>
+<!--end-->
+<!--3-->
+<button ondblclick="alert('Hi')">Нажми 2 раза</button><br>
+<!--end-->
+<!--4-->
+<div id="mouseOut" onmouseout="buttonClick2()">Наведи мышечку и убери</div>
+<!--end-->
+<!--5-->
+<input type="text" id="input1" value="куку">
+<button onclick="buttonClick3()">Нажми на меня</button><br>
+<!--end-->
+<!--6-->
+<input type="text" id="input2" value="Тут умный текст">
+<button onclick="buttonClick4()">Жми</button><br>
+<!--end-->
+<!--7-->
+<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-128.png" alt="img1" id="img">
+<button onclick="buttonClick5()">Сменить</button><br><br>
+<!--end-->
+<!--9-->
+<input onmousedown="buttonClick6(this)" type="text" id="input3" value="text"><br><br>
+<!--end-->
+<!--10-->
+<input type="text" value="Жми" onfocus="buttonFocus(this)" onblur="buttonBlur(this)"><br><br>
+<!--end-->
+<!--11-->
+<div>Это input type="submit".</div><br>
+<input type="submit" onclick="buttonClick7(this)" value="usual кнопка ;("><br><br><!--кнопка для отправки формы -->
+<!--end-->
+<!--12-->
+<input type="submit" onclick="buttonClick8(this)" value="Заблокируй меня"><br><br>
+<!--end-->
+<!--13-->
+<img onmouseover="overMus(this)" onmouseout="outMus(this)" src="http://www.freeiconspng.com/uploads/no-image-icon-13.png" id="foto1" alt="foto1">
+<!--end-->
+</body>
+<script>
+    function buttonClick0() {
+        alert('HI!')
+    }
+
+    function buttonClick1() {
+        alert('Hi');
+    }
+
+    function buttonClick2() {
+        alert('Попался!')
+    }
+
+    function buttonClick3() {
+        elemVal = document.getElementById('input1');
+        alert(elemVal.value);
+    }
+
+    function buttonClick4() {
+        anotherText = document.getElementById('input2');
+        anotherText.value = 'Другой умнейший текст';
+    }
+
+    function buttonClick5() {
+        anotherImg = document.getElementById('img');
+        anotherImg.src = 'https://cdn2.iconfinder.com/data/icons/web-interface-icons/66/Img-512.png';
+    }
+    function buttonClick6(anotherText) {
+        anotherText.value = 'Another text';
+    }
+    function buttonFocus(focus) {
+        focus.value = 'теперь заблюрь'
+    }
+    function buttonBlur(blur) {
+        blur.value = 'вот так вот'
+    }
+    function buttonClick7(el) {
+        el.value = 'unusual кнопка :D'
+    }
+    function buttonClick8(el) {
+        el.value = 'Заблокировано';
+        el.disabled = true;
+    }
+    function overMus(img) {
+        img.src = 'http://www.wowcubo.com.br/img/icon-emailmkt.png';
+    }
+    function outMus(img) {
+        img.src = 'http://www.freeiconspng.com/uploads/no-image-icon-13.png';
+    }
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+        .add {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<!--21-->
+<input type="text" id="changeTxt1" value="Text one">
+<input type="text" id="changeTxt2" value="Text two">
+<button id="button">Push</button>
+<br><br>
+<!--end-->
+<!--23-->
+<input type="text" id="enter" value="" placeholder="enter the number">
+<input type="text" id="square" placeholder="square of a number">
+<button id="resultBut" onclick="square()">result</button>
+<br><br>
+<!--end-->
+<!--24-->
+<div>Обратите внимание на курсор в различных состояниях.</div>
+<button id="buttonCursor" onclick="cursorButton()">result</button>
+<br><br>
+<!--end-->
+<!--25-->
+<input type="text" id="fieldEnter" value=""><br><br>
+<input class="add" type="submit" onclick="add('+')" value="Add +"><br>
+<input class="add" type="submit" onclick="add('-')" value="Add -"><br>
+<input class="add" type="submit" onclick="add('/')" value="Add /"><br>
+<input class="add" type="submit" onclick="add('*')" value="Add *"><br><br>
+<input class="add" type="submit" onclick="add('0')" value="0"><br>
+<input class="add" type="submit" onclick="add('1')" value="1"><br>
+<input class="add" type="submit" onclick="add('2')" value="2"><br>
+<input class="add" type="submit" onclick="add('3')" value="3"><br>
+<input class="add" type="submit" onclick="add('4')" value="4"><br>
+<input class="add" type="submit" onclick="add('5')" value="5"><br>
+<!--end-->
+
+<script>
+    $(function () {
+
+        $('#button').click(function(){
+            var input1 = $('#changeTxt1').val();
+            var input2 = $('#changeTxt2').val();
+
+            $('#changeTxt1').val(input2);
+            $('#changeTxt2').val(input1);
+        });
+
+
+    });
+
+    function square() {
+        var enterNumber = document.getElementById('enter');
+        var number = enterNumber.value;
+        if (isNaN(number)) {
+            alert('This is not a number')
+        } else {
+            document.getElementById('square').value = number * number;
+        }
+    }
+
+    function cursorButton() {
+        document.getElementById('buttonCursor').style.cursor = 'wait';
+        document.getElementById('buttonCursor').disabled = true;
+    }
+    function add(text) {
+        var enter = document.getElementById('fieldEnter');
+        enter.value = enter.value + text;
+    }
+</script>
+</body>
+</html>

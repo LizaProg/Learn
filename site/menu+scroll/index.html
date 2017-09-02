@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=devise-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="content">
+        <header>
+            <div id="logo">
+                <a href="#" title="На главную">
+                    <img src="img/logo.png" alt="logo">
+                    <span>Proger</span>
+                </a>
+            </div>
+            <div id="about">
+                <a href="#" title="Узнать о рекламе">Реклама</a>
+                <a href="#" title="Написать письмо">Обратная связь</a>
+            </div>
+            <div id="reg_auth">
+                <a href="" title="Войти в кабинет">
+                    <div class="btn">
+                        Войти
+                    </div>
+                </a>
+                <a href="" title="Зарегистрироваться на сайте">
+                    <div class="btn">
+                        Регистрация
+                    </div>
+                </a>
+            </div>
+        </header>
+        <nav>
+            <div id="menuShow"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div id="hideMenu">
+                <a href="">Новости IT</a>
+                <a href="">Видеокурсы</a>
+                <a href="">Сайты на заказ</a>
+                <a href="">Форум</a>
+                <a href="">Задачки</a>
+            </div>
+            <div id="search">
+                <span>Поиск</span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+
+            <div id="mobileMenu">
+                <a href="">Новости IT</a><br>
+                <a href="">Видеокурсы</a><br>
+                <a href="">Сайты на заказ</a><br>
+                <a href="">Форум</a><br>
+                <a href="">Задачки</a>
+                <hr>
+                <a href="">Регистрация</a>
+                <a href="">Войти</a>
+            </div>
+
+        </nav>
+    </div>
+    <footer>
+        <div id="site_name">
+            <span>Proger</span> - сообщество программистов!
+        </div>
+        <div id="clear"></div>
+        <div id="footer_menu">
+            <a href="">Реклама</a>
+            <a href="">Поддержать проект</a>
+            <a href="">Обратная связь</a>
+        </div>
+        <div id="rights">
+            <a href="">Все права защищены &copy; 2017</a>
+        </div>
+        <div id="social">
+            <a href="" title="Группа Вк"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="" title="Гркппа FB"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href="" title="Мы в Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="" title="Канал на YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a href="" title="Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+</div>
+
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+﻿
+<script>
+    $('#menuShow').click(function () {
+        if ($('#mobileMenu').is(':visible'))
+            $('#mobileMenu').hide();
+        else
+            $('#mobileMenu').show();
+    });
+    ﻿
+
+    $(document).scroll(function () {
+        if ($(document).width() > 785){
+        if ($(document).scrollTop() > $('header').height() + 10)
+            $('nav').addClass('fixed');
+        else
+    $('nav').removeClass('fixed');
+        }
+    });
+
+    window.onresize = function (event) {
+        $('#mobileMenu').hide();
+    }
+</script>
+</body>
+</html>

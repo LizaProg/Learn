@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Отмена действия по умолчанию</title>
+    <style type="text/css">
+        html {
+            background: #f0f0f0;
+            cursor: default;
+        }
+
+        html, input, button {
+            font: 16px calibri, sans-serif;
+        }
+
+        form {
+            float: left;
+            padding: 20px;
+            border: 5px solid #69c;
+            background: #fff;
+        }
+    </style>
+    <script type="text/javascript">
+        /*function test(e, p){
+         alert(p);
+         return false;
+         }
+         function f(e) {
+         document.forms.search.onsubmit = new Function("test(this, 'x')");
+         }
+         window.onload = f;*/
+
+        function foo() {
+            alert("Hello");
+            //чтоб не отправлять
+            return false;
+        }
+    </script>
+</head>
+<body>
+<form action="http://google.com" name="search" onsubmit="return foo()// чтоб не отпрравлять в гугл" >
+    <input type="text" name="q" value="cbctxrf">
+    <button type="submit">Отправить</button>
+</form>
+
+<form action="http://google.com" name="search" onsubmit="return foo()// чтоб не отпрравлять в гугл" >
+    <label for="len">Длина</label>
+    <input id="len" type="number" name="length" value="1234">
+    <label for="width">Ширина</label>
+    <input id="width" type="number" name="width" value="1234">
+    <div>Площадь равна: <span id="area"></span></div>
+</form>
+<script>
+    var length = document.getElementById('len');
+    length.oninput = calcArea;
+
+    var width = document.getElementById('width');
+    width.oninput = calcArea;
+
+    function calcArea() {
+        var lengthElem = document.getElementById('len');
+        var widthElem = document.getElementById('width');
+        var length = lengthElem.value;
+        var width = widthElem.value;
+        var area = length * width;
+        var areaElem = document.getElementById('area');
+        areaElem.innerHTML = area;
+    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Создать функцию fio(), которая поочередно запрашивает у пользователя имя, фамилию и отчество,
+а в качестве результата своей работы возвращает ФИО одной строкой с пробелами между словами.
+-->
+
+<script>
+    function fio() {
+        var name = prompt("Введите ваше имя: ");
+        var lastName = prompt("Введите вашу фамилию: ");
+        var patronymic = prompt("Введите ваше отчество: ");
+        var result = lastName + " " + name + " " + patronymic;
+        return result;
+    }
+    alert("Вас зовут: " + fio());
+</script>
+</body>
+</html>

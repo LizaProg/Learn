@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Написать цикл для вывода квадратов всех чисел от 1 до 7.
+
+В итоге вы должны получить такую картину:
+Квадрат 1 = 1
+Квадрат 2 = 4
+Квадрат 3 = 9
+Квадрат 4 = 16
+Квадрат 5 = 25
+Квадрат 6 = 36
+Квадрат 7 = 49-->
+
+<script>
+    /*for (var i = 1; i <= 7; i++){
+        document.write("Квадрат " + i + " равен " + i*i + "<br>");
+    }*/
+
+    var res = 1;
+    for (var i = 1; i <= 7; i++){
+        res = Math.pow(i, 2);
+        document.write("Квадрат " + i + " = " + res + "<br>");
+    }
+</script>
+</body>
+</html>

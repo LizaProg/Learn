@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>BOM</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        #demoLinks a {
+            display: block;
+            color: blue
+        }
+    </style>
+
+    <script type="text/javascript">
+        function f() {
+            window.alert("Hello world!")
+        }
+        function c() {
+            var x = confirm("Are you sure?");
+            alert(x)
+        }
+        function p() {
+            var y = prompt("Are you sure?", "Yes");
+            alert(y)
+        }
+    </script>
+</head>
+
+<body>
+<h1>Объектная модель браузера</h1>
+<div id="demoLinks">
+    <a href="javascript:f()">Click me (alert)</a>
+    <a href="javascript:c()">Click me (confirm)</a>
+    <a href="javascript:p()">Click me (prompt)</a>
+</div>
+</body>
+</html>

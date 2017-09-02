@@ -1,0 +1,10 @@
+body{
+	font: 1em 'PT Sans', Arial, sans-serif;
+}
+.container{
+	column-count: 3;  /* количесво колонок  */
+	margin: 50px;
+	column-width: 200px;/*ширина колонок*/
+	column-gap: 100px; /*расстояние му колонками*/
+	column-rule: 4px outset rgba(0,0,0,.5); /*разделитель колонок*/
+}

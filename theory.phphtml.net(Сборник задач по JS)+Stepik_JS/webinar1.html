@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item {
+            width: 150px;
+            height: 150px;
+            background-color: burlywood;
+            float: left;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .item-active {
+            border: solid 2px #5564da;
+        }
+    </style>
+</head>
+<body>
+<div class="items">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+</div>
+
+<script>
+    window.onload = function () {
+        var items = document.querySelectorAll('.items .item');
+
+        function activeItem() {
+            this.classList.toggle('item-active');
+        }
+
+        setInterval(function () {
+            var rand = random(0, items.length - 1);
+            activeItem.call(items[rand]);
+        }, 500);
+
+    };
+
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1));
+    }
+</script>
+
+</body>
+</html>

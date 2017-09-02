@@ -1,0 +1,65 @@
+html{
+    min-height: 100%
+}
+body{
+    background-image: linear-gradient(45deg, #FCA5F1,  #B5FFFF)
+}
+
+.navbar-nav{
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+}
+.navbar-brand{
+    color: #7082DA;
+    font-family: 'Shrikhand', cursive;
+    font-size: 25px;
+}
+#our-product{
+    text-align: center;
+    color: #7C5277;
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+}
+#our-product-description{
+    text-align: center;
+    color: #3D283A;
+    font-family: 'Ranga', cursive;
+    font-size: 25px;
+}
+.media-heading{
+    color: #9097da;
+    font-family: 'Shrikhand', cursive;
+}
+.media-body p{
+    color: #9B6594;
+    font-family: 'Ranga', cursive;
+    font-size: 17px;
+}
+.panel-heading{
+    color: #7C5277;
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+}
+.panel{
+    background: #A3E5E5;
+}
+.well{
+    background: #88BFBF;
+}
+
+.phrase{
+    color: #6E9B9B;
+    font-family: 'Ranga', cursive;
+    font-size: 17px;
+}
+.order{
+    color: #3D283A;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+}
+.great{
+    color: #2D4040;
+    font-family: 'Ranga', cursive;
+    font-size: 25px;
+}
+

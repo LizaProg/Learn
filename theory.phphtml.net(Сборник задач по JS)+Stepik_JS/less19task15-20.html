@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <style>
+        #unblock{
+            display: none;
+        }
+        #count, #input6{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<!--15-->
+<input type="text" id="input1" value="сейчас сменится цвет">
+<button onclick="buttonClick15()">Смени цвет</button>
+<br><br>
+<!--end-->
+<!--16-->
+<input type="text" id="input2" value="сейчас я спрячусь">
+<button onclick="buttonHide()" id="buttonHide">Спрячь меня</button>
+<button onclick="buttonShow()" id="buttonShow">Покажи меня</button>
+<br><br>
+<!--end-->
+<!--17-->
+<input type="text" id="input3" value="Эй">
+<button onclick="buttonClick17()" id="input4">Жми</button>
+<br><br>
+<!--end-->
+<!--18-->
+<div>Это input type="submit".</div>
+<input type="submit" onclick="buttonBlock()" value="Нажми" id="block"><br>
+<input type="submit" onclick="buttonUnblock()" value="Жми чтобы разблокировать" id="unblock"><br><br>
+<!--end-->
+<!--19-->
+<div>Кнопка считает кол-во нажатий по ней.</div>
+<input type="submit" onclick="buttonCount()" value="0" id="count"><br><br>
+<!--end-->
+<!--20-->
+<input type="text" id="input5" value="text">
+<button onclick="flyButton()" id="flyButton">Жми</button>
+<br><br>
+<!--end-->
+<!--21-->
+<input type="text" id="input6" class="new wow bomb" value="Хочешь узнать мои классы?">
+<button onclick="buttonClick21()" id="">Жми</button>
+<br><br>
+<!--end-->
+
+<script>
+function buttonClick15() {
+    document.getElementById('input1').style.color = 'red';
+}
+function buttonHide() {
+    document.getElementById('input2').style.display = 'none';
+    document.getElementById('buttonHide').disabled = true;
+}
+function buttonShow() {
+    document.getElementById('input2').style.display = 'inline-block';
+    document.getElementById('buttonShow').disabled = true;
+}
+function buttonClick17() {
+    var input = document.getElementById('input3');
+    input.value = 'Изменился текст и css';
+    input.style.color = 'red';
+    input.style.width = '300px';
+    input.style.height = '50px';
+    input.style.borderRadius = '10px';
+}
+function buttonBlock() {
+    var buttonBlock = document.getElementById('block');
+    var buttonUnblock = document.getElementById('unblock');
+    buttonBlock.disabled = true;
+    buttonBlock.value = 'Ой не нажимется';
+    buttonUnblock.style.display = 'inline-block';
+}
+function buttonUnblock() {
+    var buttonUnblock = document.getElementById('unblock');
+    var buttonBlock = document.getElementById('block');
+    buttonUnblock.style.display = 'none';
+    buttonBlock.disabled = false;
+    buttonBlock.value = 'Снова нажимается ура!'
+   }
+function buttonCount() {
+    var countButton = document.getElementById('count');
+     countButton.value = parseInt(countButton.value) + 1;
+}
+function flyButton() {
+    var string = document.getElementById('input5');
+    string.style.cssFloat = 'right';
+    string.value = 'yo';
+    string.style.color = 'green';
+}
+function buttonClick21() {
+    var input = document.getElementById('input6');
+    input.value = "Такие мои классы: " + input.className;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--используя методы объекта date, вывести на экран
+время в формате: час:минута:секунда (пример: 14:23:11)
+
+При этом, если секунды и минуты попадают в интервал от 0 до 10,
+они должны выводиться с нулем впереди.
+т.е. вместо 18:7:3 у Вас должно выводиться 18:07:03-->
+
+<script>
+    var now = new Date();
+    var hour = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    if (minutes < 10){
+        minutes = "0" + minutes;
+    }
+    if (seconds < 10){
+        seconds = "0" + seconds;
+    }
+
+    document.write("Текущее время: " + hour + ":" + minutes + ":" + seconds);
+</script>
+</body>
+</html>

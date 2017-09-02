@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+функция, которая бы вычисляла квадрат переданного ей числа и выводила бы его на экран.
+-->
+
+<script>
+function square(number) {
+    var res = number * number;
+    document.getElementById('result').innerHTML = "Квадрат числа: " + number + " равен: " + res;
+}
+
+function onClick() {
+    var x = parseInt(document.getElementById('a').value);
+    square(x);
+}
+
+
+
+
+/*function square() {
+    //найти поля в которые писать числа
+    //из строки перевели в числа
+    var a = parseInt(document.getElementById('a').value);
+    if (isNaN(a)) {
+        alert("Введите числа!");
+    }else {
+        //сложить их
+        var res = Math.pow(a, 2);
+        //найти куда писать результат, вставть сумму
+        document.getElementById('result').innerHTML = a + " в квадрате равно " + res;
+    }
+}*/
+
+/*function cube() {
+    var num = prompt("Укажите число для вычислеения куба: ");
+    var res = Math.pow(num, 3);
+    document.write(num + " в кубе равно " + res);
+}
+cube();*/
+</script>
+
+
+<form>
+    <input id="a" type="text" value=" "><br>
+    <input type="button" value="Квадрат числа" onclick="onClick();"><br>
+</form>
+<div id="result"></div>
+
+</body>
+</html>

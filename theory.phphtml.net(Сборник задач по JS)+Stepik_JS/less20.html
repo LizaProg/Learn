@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .my-class{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--1-->
+<div id="text">При нажатии на кнопку текст в абзаце поменяется.</div>
+<br>
+<button onclick="changeText()">Жми и поменяй</button>
+<br><br>
+<!--2-->
+<div id="text1">При нажатии на кнопку текст в абзаце поменяется.</div>
+<br>
+<button onclick="changeText1()">Жми и поменяй</button>
+<br><br>
+<!--3-->
+<div id="text2">При нажатии на кнопку текст останется прежним но в h3.</div>
+<br>
+<button onclick="changeTag()">Жми и поменяй</button>
+<br><br>
+<!--4-->
+<input type="text" value="" id="input1">
+<i>+</i>
+<input type="text" value="" id="input2">
+<i>=</i>
+<span id="result">?</span><br>
+<button onclick="plus()">Жми чтоб сложить</button>
+<br><br>
+<!--5-->
+<div>я поменяюсь</div>
+<div>я поменяюсь</div>
+<div>я поменяюсь</div>
+<h2>я - h2 я не поменяюсь!</h2>
+<button onclick="constantH2()">Нажми на меня я изменю</button>
+<br><br>
+<!--6-->
+<h2 class="www">Заголовок с классом www.</h2>
+<p class="www">Абзац с классом www.</p>
+<p class="www">Абзац с классом www.</p>
+<p>Просто абзац, не поменяется.</p>
+<button onclick="index()">Нажми на меня я изменю</button>
+<br><br>
+<!--7-->
+<h2 class="ww">Заголовок с классом ww, не поменяется.</h2>
+<p class="ww">Абзац с классом ww.</p>
+<p class="ww">Абзац с классом ww.</p>
+<p class="ww">Абзац с классом ww.</p>
+<p>Просто абзац, не поменяется.</p>
+<button onclick="index1()">Нажми на меня я изменю</button>
+<br><br>
+<!--9-->
+<p id="my-class" class="my-class">Абзац с class="my-class new-class". Класс задает красный цвет.</p><br>
+<button onclick="classP()">Вывести класс абаца</button>
+<br>
+<button onclick="removeMyClass()">Удалить атрибут class</button>
+<br><br>
+<!--11-->
+<input type="text" id="userTxt" onkeyup="userTxt()" placeholder="Напишите что нибудь тут" value="">
+<span id="txtUs"></span> <br><br>
+<!--12-->
+<a href="http://google.ru">Ссылка №1</a><br>
+<a href="http://ya.ru">Ссылка №2</a><br>
+<a href="http://rambler.ru">Ссылка №3</a><br><br>
+<button onclick="link()">Подробная информация</button>
+<br><br>
+</body>
+<script>
+    function changeText() {
+        document.getElementById('text').innerHTML = 'Привет! Я <strong>жирный</strong> как и ты';
+    }
+
+    function changeText1() {
+        document.getElementById('text1').outerHTML = '<h3>Абзац превратился в h3!</h3>';
+    }
+
+    function changeTag() {
+        var text = document.getElementById('text2');
+        text.outerHTML = '<h3>' + text.innerHTML + '</h3>';
+    }
+    function plus() {
+        var input1 = document.getElementById('input1').value;
+        var input2 = document.getElementById('input2').value;
+        document.getElementById('result').innerHTML = parseInt(input1) + parseInt(input2);
+    }
+    function constantH2() {
+        var elemetDiv = document.getElementsByTagName('div');
+        for (var i = 0; i < elemetDiv.length; i++) {
+            elemetDiv[i].innerHTML = 'Другой текст!'
+        }
+    }
+    function index() {
+        var elem = document.getElementsByClassName('www');
+        for (var i = 0; i < elem.length; i++) {
+            elem[i].innerHTML = i + 1;
+        }
+    }
+    function index1() {
+        var el = document.querySelectorAll('p.ww');
+        for (var i = 0; i < el.length; i++) {
+            el[i].innerHTML = i + 1;
+        }
+    }
+    function link() {
+        var allLink = document.getElementsByTagName('a');
+        for(var i = 0; i < allLink.length; i++){
+            allLink[i].innerHTML = allLink[i].innerHTML +' (' + allLink[i].getAttribute('href') + ')';
+        }
+    }
+    function classP() {
+        var text = document.getElementById('my-class');
+        alert(text.getAttribute('class'));
+    }
+    function removeMyClass() {
+        var text = document.getElementById('my-class');
+        text.setAttribute('class', 'new-class');
+        alert('Класс изменен! Нажмите на первую кнопку чтобы проверить это!')
+    }
+    function userTxt() {
+        var usrText = document.getElementById('userTxt').value;
+        document.getElementById('txtUs').innerHTML = usrText;
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
