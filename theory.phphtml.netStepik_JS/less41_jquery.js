@@ -145,12 +145,12 @@ $(function () {
       $(this).nextAll(':eq(4)').not('h2').remove();
     });*/
 
-   /*31*/
-   /*$('p').click(function () {
-       $(this).nextAll(':eq(4)').not(':has(b)').remove();
-   })*/
+    /*31*/
+    /*$('p').click(function () {
+        $(this).nextAll(':eq(4)').not(':has(b)').remove();
+    })*/
 
-   /*32*/
+    /*32*/
     /*$('p').click(function () {
         $(this).nextAll(':eq(4)').not('h2').next().remove();
     })*/
@@ -173,12 +173,96 @@ $(function () {
     })/!*делегирование(клоны тоже клонируются)*!/*/
 
     /*35*/
-    $('*').click(function () {
-       var neigh = $(this).nextAll('.www').first(); /*сосед ближайший снизу*/
-        $(this).insertAfter(neigh);
+    /*!!!*/
+
+    /*$('*').click(function () {
+       var neigh = $(this).nextAll('.www').first(); /!*сосед ближайший снизу*!/
+        /!*neigh.remove().append($(this));
+        $(this).remove().append(neigh);*!/
+        //neigh.detach().prependTo($(this)).end().$(this).detach().prependTo(neigh);
+    });*/
+
+    /*36*/
+    /*!!!*/
+
+    /*$('h2 + p').each(function() {
+        $(this).next().is('h2').css('color', 'red');
+    })*/
+    /*каждый h2 у которого сосед справа р
+    * если у него следующий это h2 то сделать красным*/
+
+    /*37*/
+    /*$('p').each(function () {
+        $(this).wrap('<div></div>').wrapInner('<div></div>')
+    });*/
+
+    /*38*/
+    /*$('p').parent().not('div').children('p').wrap('<div class="www">');*/
+
+    /*39*/
+    //$('p').parent().not('div.www').unwrap().wrap('<div class="zzz">');
+
+    /*40*/
+    /*var arr = [];
+    $('#test').parents().each(function () {
+        var classParent = $(this).attr('class');
+        if (classParent) {
+            arr = arr.concat(classParent.split(' '));
+        }
     });
+    console.log(arr);*/
+
+    /*41*/
+   /* $('p').each(function () {
+        var pClass = $(this).attr('class');
+        if (pClass) {
+            var classes = $(this).attr('class');
+            var div = $('<div>').addClass(classes);
+            $(this).removeAttr('class').wrap(div);
+        }
+    })*/
+
+   /*43*/
+   //$('li').eq(-2).prev().append('<li>Point</li>');
+
+    /*44*/
+    //$('li').eq(-2).append('!').end().eq(-3).append('!').end().eq(-4).append('!');
+    //$('li').slice(-4, -1).append('!');
+
+    /*45*/
+  // $('ol').text($('ol').children().reverse());
+
+    /*46*/
 
 
 
-    /*9 задач в день и не ибет 1*/
+
+    /*9 задач в день и не ибет 2*/
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
