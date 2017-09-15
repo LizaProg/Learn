@@ -213,31 +213,130 @@ $(function () {
     console.log(arr);*/
 
     /*41*/
-   /* $('p').each(function () {
-        var pClass = $(this).attr('class');
-        if (pClass) {
-            var classes = $(this).attr('class');
-            var div = $('<div>').addClass(classes);
-            $(this).removeAttr('class').wrap(div);
-        }
-    })*/
+    /* $('p').each(function () {
+         var pClass = $(this).attr('class');
+         if (pClass) {
+             var classes = $(this).attr('class');
+             var div = $('<div>').addClass(classes);
+             $(this).removeAttr('class').wrap(div);
+         }
+     })*/
 
-   /*43*/
-   //$('li').eq(-2).prev().append('<li>Point</li>');
+    /*43*/
+    //$('li').eq(-2).prev().append('<li>Point</li>');
 
     /*44*/
     //$('li').eq(-2).append('!').end().eq(-3).append('!').end().eq(-4).append('!');
     //$('li').slice(-4, -1).append('!');
 
     /*45*/
-  // $('ol').text($('ol').children().reverse());
+    // $('ol').text($('ol').children().reverse());
 
-    /*46*/
+    /*47*/
+    // $('li.www').css('color', 'red');
+    // $('li.bbb').remove();
+    //$('li.www').css('color', 'red').filter('.bbb').detach();
 
 
+    /*48*/
+    /*$('li:even').html('!');
+    $('li:odd').html('?');*/
+
+    /*$('li:odd').empty();
+    $('li:even').remove();*/
+
+    /*49*/
+
+    //$('.square').animate({width: '200px', height: '200px'});
+
+    /*  $('.square').height(function (i, h) {
+          return h * 2;
+      });
 
 
-    /*9 задач в день и не ибет 2*/
+      $('div').click(function () {
+          $(this).height(function (i, h) {
+              return h * 2;
+          })
+      })*/
+
+    /*50*/
+    /*var res = 0;
+    $('div').height(function (i, h) {
+        res += h;
+    });
+      console.log(res);*/
+
+    /*53*/
+    //$('li').slice(0, 10).css('color', 'red');
+
+    /*54*/
+    //$('li').slice(4, 10).css('color', 'red');
+
+    /*55*/
+    // $('li').slice(-10).css('color', 'red').filter(':odd').wrapInner('<b>');
+
+    /*56*/
+    /*var check = 0;
+    $('input[type=checkbox]').each(function () {
+        if ($(this).prop('checked')) {
+            check += 1;
+        }
+    });
+    console.log(check);*/
+
+
+    /*57*/
+    /*$('input[type=checkbox]').click(function () {
+        if ($(':checkbox:checked').length == 2) {
+            $(':checkbox').attr('disabled', 'true');
+        }
+    });*/
+
+    /*УДАЛИТЬ ОТМЕЧЕННЫЕ*/
+    /*$('input:checkbox').change(function () {
+        $('#delete').toggle($(':checkbox:checked').length > 0);
+    });
+    $('#delete').click(function () {
+        $('input:checkbox').prop('checked', false);
+    });*/
+
+    /*58*/
+    /*$('#change').click(function () {
+        $('input:checkbox').each(function () {
+            var checked = $(this).prop('checked');
+            $(this).prop('checked', !checked);
+        })
+    })*/
+
+    /*59*/
+    /*$('.placeholder').each(function () {
+        $(this).attr('placeholder', $(this).val()).removeAttr('value');
+    })*/
+
+    /*61*/
+    $('#user-num').blur(function () {
+        $('input:checkbox').each(function () {
+            if ($(this).val() == $('#user-num').val()) {
+                $(this).prop('checked', true)
+            }else {
+                $(this).prop('checked', false)
+            }
+        });
+    });
+
+    /*62*/
+    $('#trip').change(function () {
+        $('input:radio').each(function () {
+            if ($(this).val() == $('#trip').val()) {
+                $(this).prop('checked', true)
+            }else {
+                $(this).prop('checked', false)
+            }
+        });
+    })
+
+
 });
 
 

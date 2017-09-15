@@ -16,18 +16,55 @@
         .original {
             color: green;
         }
+
+        .square {
+            width: 50px;
+            height: 50px;
+            border: solid 1px firebrick;
+        }
+
+        #delete {
+            display: none;
+        }
     </style>
 </head>
 <body>
+<div>
+    <p>How would you like to take a trip?</p>
+    <select id="trip">
+        <option>Moscow</option>
+        <option>Minsk</option>
+        <option>Kiev</option>
+        <option>London</option>
+    </select>
+    <p>You will go to:</p>
+    <input type="radio" value="Moscow">Moscow
+    <input type="radio" value="Minsk">Minsk
+    <input type="radio" value="Kiev">Kiev
+    <input type="radio" value="London">London
+</div>
+<br><br>
+<input class="placeholder" type="text" value="bla-bla">
+<input class="placeholder" type="text" value="bla-bla-bla">
+<div><p>enter the number (only from 3 to 5)</p>
+    <input id="user-num" type="text" placeholder="enter the number"><br>
+    <input type="checkbox" value="3">3
+    <input type="checkbox" value="4">4
+    <input type="checkbox" value="5">5
+</div>
 <p>Lorem ipsum dolor sit. <b>hi</b> ligot alkod</p>
 <h2>Text in H2 (1)</h2>
 <p>Lonr hdf</p>
 <p class="www">easy goy niy uiy this is him</p>
 <b>This is tag B</b><br>
 
+<input type="checkbox" checked>
+<input type="checkbox">
 <input type="checkbox">
 <input type="checkbox">
 <input type="checkbox"><br>
+<button id="delete">Удалить отмеченные</button>
+<button id="change">Change checked</button>
 <p>fifth sibling is 'h2'</p>
 <p>text in p</p>
 <!--<div id="test">div #test</div>-->
@@ -41,14 +78,17 @@
 <b>This is tag B</b>
 <div>lorem la la la</div>
 <ol>
-    <li>text lorem in li 1</li>
-    <li>text lorem in li  2</li>
+
+    <li class="www">text lorem in li 1</li>
+    <li>text lorem in li 2</li>
     <li>text lorem in li 3</li>
-    <li>text lorem in li 4</li>
+    <li class="www">text lorem in li 4</li>
     <li>text lorem in li</li>
+    <li class="bbb">text lorem in li bbb</li>
     <li>text lorem in li</li>
+    <li class="www">text lorem in li</li>
     <li>text lorem in li</li>
-    <li>text lorem in li</li>
+    <li class="bbb">text lorem in li bbb</li>
     <li>text lorem in li</li>
     <li>text lorem in li</li>
 </ol>
@@ -71,9 +111,13 @@
 
 <div class="header">
     <p class="content">Lorem ipsum dolor.
-        <h2 class="in_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i id="test">id test Lorem ipsum dolor sit amet.</i>Praesentium, sint!</h2>
+    <h2 class="in_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i id="test">id test Lorem ipsum
+        dolor sit amet.</i>Praesentium, sint!</h2>
     </p>
 </div>
+
+<div class="square"></div>
+
 
 </body>
 </html>
