@@ -125,7 +125,9 @@ function onload() {
     elem2.append('ogog').attr('style','color: red');
     */
 
-    class myJquery {
+    /*TASK 2*/
+
+    /*class myJquery {
         constructor(selector) {
             this.elem = document.querySelectorAll(selector);
         }
@@ -162,7 +164,54 @@ function onload() {
 
     var elem1 = new myJquery('.uuu');
     elem1.html('Hello').append('!!!').prepend('???').attr('class', 'zzz');
+}
+*/
+
+
+    class Rectangle {
+        constructor(width, height, background) {
+            this.elem = document.createElement('div');
+
+            this.setWidth(width);
+            this.setHeight(height);
+            this.setBackground(background);
+            this.elem.style.border = '1px solid red';
+            this.elem.style.margin = '10px';
+
+            document.body.appendChild(this.elem);
+        }
+
+        setWidth(width) {
+            this.elem.style.width = width + 'px';
+        }
+        getWidth(){
+            /*return this.elem.style.width; с px!*/
+            return parseInt(this.elem.style.width);
+        }
+        setHeight(height){
+            this.elem.style.height = height + 'px';
+        }
+        getHeight(){
+            return parseInt(this.elem.style.height);
+        }
+        setBackground(background){
+            this.elem.style.background = background;
+        }
+        getBackground(){
+            return this.elem.style.background;
+        }
+
+
+    }
+
+    var rect1 = new Rectangle(100, 100, 'green');
+    rect1.setWidth(200);
+    console.log(rect1.getWidth());
+    var rect2 = new Rectangle(50, 100);
+    rect2.setHeight(50);
+    console.log(rect2.getHeight());
+    rect2.setBackground('red');
+    console.log(rect2.getBackground());
 
 
 }
-
