@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;/*для того чтобы работало в ie 11*/
+}
+.block{
+    display:flex;
+    width: 70%;
+    min-height: 400px;
+    margin:20px auto;
+    padding: 0;
+    flex-direction:column;
+    justify-content: space-between;
+    background: #d6d6d6;
+    border:10px solid black;
+}
+.item{
+    border:1px solid grey;
+    background: rgba(0,0,255,0.4);
+    flex-basis:auto;
+    min-height: 50px;
+}

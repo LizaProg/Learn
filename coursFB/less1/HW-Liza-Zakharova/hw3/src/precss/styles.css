@@ -1,0 +1,173 @@
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td, menu {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img, abbr {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul li, menu li {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+legend {
+    color: #000;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* styles */
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+section.profit {
+    background: #232324;
+    padding: 15px 0;
+}
+
+section.profit .item {
+    border: 3px solid #fff;
+    text-align: center;
+    background: #fff;
+}
+
+section.profit .item .text {
+    text-align: left;
+    font-style: italic;
+}
+
+/* positions */
+
+/*VAR I*/
+
+section.profit .wrap img {
+    max-width: 100%;
+}
+
+section.profit .wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section.profit .item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
+}
+
+section.profit .item .img {
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 5px;
+}
+
+section.profit .item .text {
+    flex-basis: 290px;
+    flex-grow: 3;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width: 862px) {
+
+    section.profit .item:nth-child(2n+1) {
+        flex-direction: row-reverse;
+    }
+}
+
+/*VAR II*/
+/*img{
+	max-width: 100%;
+	height: auto;
+}
+
+.item{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 400px;
+	margin: 5px;
+}
+
+.text{
+	flex: 3 1 292px;
+	margin: 0 2px;
+}
+
+.img{
+	flex: 1 1 100px;
+	margin: 0 2px;
+}
+
+.wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+@media screen and (max-width: 840px){
+	section.profit .item:nth-child(even){
+		flex-direction: row-reverse;
+	}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

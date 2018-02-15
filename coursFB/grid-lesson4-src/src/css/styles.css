@@ -1,0 +1,91 @@
+html,
+body {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.humans {
+  background: #232323;
+  text-align: center;
+}
+
+.humans .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.humans .col {
+  box-sizing: border-box;
+  margin: 15px;
+  width: calc(25% - 30px);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.humans .col img {
+  margin: 10px 0;
+  max-width: 90%;
+  align-self: center;
+}
+
+.humans .col .subtitle {
+  color: #6cc372;
+  font-size: 24px;
+  margin: 10px 0 20px;
+}
+
+.humans .col .job {
+  margin: auto 10px 10px 10px;
+}
+
+.humans .col .follow {
+  background: #6cc372;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.items .item {
+  min-height: 200px;
+  background: #ccc;
+  box-sizing: border-box;
+  margin: 15px;
+  width: calc(16.666666666666668% - 30px);
+}
+
+@media screen and (max-width: 900px) {
+  .humans .col {
+    width: calc(50% - 30px);
+  }
+
+  .items .item {
+    width: calc(33.333333333333336% - 30px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .humans .col {
+    width: calc(100% - 30px);
+  }
+
+  .items .item {
+    width: calc(50% - 30px);
+  }
+}

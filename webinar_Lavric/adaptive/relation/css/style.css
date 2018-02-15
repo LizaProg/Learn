@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    font-size: 16px;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.wrapper {
+    max-width: 1024px;
+    padding: 5px 30px;
+    margin: 0 auto;
+}
+
+.relation{
+    position: relative;
+}
+
+.relation__ratio{
+    padding-top: 56.25%;
+    height: 0;
+}
+
+.relation__content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #776655;
+}
+
+.video{
+    max-width: 700px;
+}

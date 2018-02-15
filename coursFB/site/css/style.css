@@ -1,0 +1,157 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.main {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+    min-height: 600px;
+    background: url("../img/header-bg.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.main-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: 0;
+
+    background-image: -moz-linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%);
+    background-image: -webkit-linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%);
+    background-image: -ms-linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%);
+}
+
+.header {
+    border: 5px solid #000;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    position: relative;
+    z-index: 2;
+}
+
+.menu {
+    width: 50%;
+    border: 1px solid red;
+    font-size: 16px;
+}
+
+.menu ul {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-get-started{
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.main-text{
+    border: 1px solid #000;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.main-text span{
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.main-text h1{
+    font-size: 80px;
+    margin: 30px 0 25px 0;
+    font-weight: normal;
+}
+
+.main-text p{
+    line-height: 1.5;
+}
+
+.main-text span::after{
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.main-text span::before{
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.main-arrow{
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-arrow-down{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+html, body{
+    margin: 0;
+}
+
+.humans{
+    background: #232323;
+    text-align: center;
+}
+
+.humans .col{
+    background: #fff;
+    border-radius: 10px;
+    max-width: 560px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.humans .col img{
+    margin: 10px 0;
+    width: 90%;
+}
+
+.humans .col .subtitle{
+    color: #6cc372;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.humans .col .job{
+    margin: 10px;
+    margin-top: auto;
+}
+
+.humans .col .follow{
+    background: #6cc372;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}

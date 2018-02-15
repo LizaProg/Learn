@@ -1,0 +1,147 @@
+@import "progect.less";
+
+.a {
+  color: @color_red;
+
+  &:hover {
+    color: lighten(@color_red, 30%);
+  }
+}
+
+.b {
+  color: lighten(@color_blue, 10%);
+  /*на 10% светлее
+  http://lesscss.org/
+  Color Channel Functions
+  */
+}
+
+/*примеси*/
+.c {
+  color: @color_green;
+}
+
+.item {
+  width: 100%;
+  .title {
+    color: #000;
+  }
+  .subtitle {
+    color: #fa93b6;
+  }
+}
+
+/*бэм*/
+
+.block {
+  width: 100px;
+
+  @media screen and (max-width: 600px) {
+      width: 20%;
+  }
+
+  &__title {
+    color: #000;
+  }
+
+  &__subtitle {
+    color: #36c1d0;
+
+    &-some {
+      color: #366bd0;
+    }
+  }
+}
+
+/*арифметические операции*/
+
+.math {
+  font-size: @h1_size - @h2_size;
+}
+
+.nz {
+  @xw: 400px;
+  @xm: 15px;
+  @yw: 200px;
+
+  /*переменные объявленные внутри фигурных скобок за их пределы не выходят
+  (локальные переменные)*/
+
+  .x {
+    width: @xw;
+    margin: @xm;
+  }
+
+  .y {
+    width: @yw;
+  }
+
+  @media screen and (max-width: (@xw + @yw + 2 * @xm)) {
+    .x, .y {
+      width: 100%;
+    }
+  }
+}
+
+.ab {
+  @xw: 100px;
+  width: @xw;
+
+  .btn();
+}
+
+/*интерполяция*/
+.item{
+  margin: 15px;
+  width: calc(~"25% - 30px");
+  background: url(~"@{path_img}/1.jpg");
+
+  .btn();
+}
+
+/*примеси
+этот код не генерируется в css*/
+
+.btn(){
+  display: inline-block;
+  padding: 20px;
+
+  &:hover{
+    box-shadow: 5px 5px 2px #222 inset;
+  }
+}
+
+.col{
+  margin-left: @offset_one_side;
+  margin-right: @offset_one_side;
+}
+
+.size(@n){
+  @w: 100% / @columns * @n;
+  width: calc(~"@{w} - @{offset}");
+}
+
+.sixCol{
+  .col();
+  .size(6);
+}
+
+.threeCol{
+  .size(3);
+}
+
+.oneCol{
+  .size(1);
+  .mw600(color, red)
+}
+
+.mw600(@name, @value){
+  @media screen and (max-width: 600px) {
+    @{name}: @value;
+  }
+}
+
+
+
+
+

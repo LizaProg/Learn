@@ -1,0 +1,61 @@
+@import "progect.less";
+
+*{
+  .reset();
+}
+
+section {
+
+  &.profit {
+    background: @gray;
+    padding: 15px 0;
+
+    @media screen and (max-width: 861px) {
+      .item:nth-child(2n+1) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .item {
+      .flex();
+      border: 3px solid @white;
+      text-align: center;
+      background: @white;
+      justify-content: space-around;
+      flex-basis: 400px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin: 10px;
+
+      .text {
+        text-align: left;
+        font-style: italic;
+        flex-basis: 290px;
+        flex-grow: 3;
+        flex-shrink: 1;
+      }
+    }
+
+    .wrap {
+      .flex();
+      .center();
+      max-width: 960px;
+      height: 100%;
+      padding: 0 5px;
+      overflow: hidden;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .img {
+      flex-basis: 100px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin-right: 5px;
+    }
+  }
+}
+

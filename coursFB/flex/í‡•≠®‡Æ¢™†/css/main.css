@@ -1,0 +1,95 @@
+/*  General Styling  */
+
+body {
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+.intro {
+	width: 1003px;
+	margin: 70px auto 0px auto;
+	color: #36c1d0;
+}
+
+.block__element span {
+	background: #dee8fb;
+	color: #366bd0;
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	margin-left: -20px;
+	top: 50%;
+	margin-top: -20px;
+}
+
+.block {
+	background: #36c1d0;
+	width: 1000px;
+	height: 600px;
+	margin: 60px auto;
+	padding: 20px;
+}
+
+.block__element {
+	background: #fff;
+	width: 10%;
+	height: 100px;
+	position: relative;
+	margin: 6px;
+}
+
+.credits {
+	width: 1000px;
+	margin: 0 auto 65px auto;
+}
+
+.credits__links {
+	padding: 0;
+	margin: 0;
+}
+
+.credits__link {
+	display: block;
+}
+
+.credits__link a {
+	font-size: 13px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(54, 193, 208, 0.42);
+	color: #36c1d0;
+	font-weight: bold;
+	margin-right: 30px;
+	padding-bottom: 4px;
+}
+
+.credits__link a:hover {
+	border-bottom: 0;
+}
+
+/*  Flexbox CSS Styling  */
+
+.flex-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	/*align-content: center;*/
+}
+
+.flex-element {
+	order: 0;
+	flex-grow: 1;
+	flex-shrink:1;
+	flex-basis: auto;
+	align-self: auto;
+}
+
+

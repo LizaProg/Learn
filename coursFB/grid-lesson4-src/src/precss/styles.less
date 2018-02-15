@@ -1,0 +1,72 @@
+@import "grid.less";
+
+html, body{
+    margin: 0;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.humans{
+    background: #232323;
+    text-align: center;
+
+    .row{
+        .row();
+    }
+
+    .col{
+        .col();
+        .size(3);
+        .size-md(6);
+        .size-xs(12);
+
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            margin: 10px 0;
+            max-width: 90%;
+            align-self: center;
+        }
+
+        .subtitle{
+            color: #6cc372;
+            font-size: 24px;
+            margin: 10px 0 20px;
+        }
+
+        .job{
+            margin: auto 10px 10px 10px;
+        }
+
+        .follow{
+            background: #6cc372;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+}
+
+.items{
+    .row();
+
+    .item{
+        min-height: 200px;
+        background: #ccc;
+
+        .col();
+        .size(2);
+        .size-md(4);
+        .size-xs(6);
+    }
+}

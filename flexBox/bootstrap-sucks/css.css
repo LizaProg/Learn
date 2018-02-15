@@ -1,0 +1,28 @@
+html, body {
+    margin: 20px 0 0 0;
+    background: #232323;
+    color: #fff;
+
+}
+
+.wrapper {
+    max-width: 1280px;
+    padding: 0 15px;
+    border: 1px solid #ff0;
+}
+
+.row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    min-height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #777;
+    float: left;
+    width: calc(10% - 30px);
+    margin: 0 15px;
+}

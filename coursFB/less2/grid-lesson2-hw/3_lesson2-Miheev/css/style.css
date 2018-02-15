@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background: pink;*/
+}
+
+.blok-1, .blok-2, .blok-3, .blok-4, .blok-5 {
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+
+}
+.blok-1 {
+    background-color: lightblue;
+}
+
+.blok-2 {
+    background-color: lightsalmon;
+}
+
+.blok-3 {
+    background-color: lightgreen;
+}
+
+.blok-4 {
+    background-color: darkgreen;
+}
+
+.blok-5 {
+    background-color: lightgrey;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.wrap {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.flex1, .flex3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 30.8 1 30.8%;
+    margin: 0 0.39%;
+}
+
+.flex2 {
+    display: flex;
+    flex: 35.4 1 35.4%;
+    margin: 0 0.4%;
+}
+
+.proportion {
+    position: relative;
+}
+
+.ratio {
+    height: 0;
+    padding-top: 63.1%;
+}
+
+@media screen and (max-width: 690px) {
+
+    .wrap {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 0.72%;
+        align-content: center;
+    }
+
+    .flex1 {
+        width: 29%;
+        flex: 0 1 50%;
+        margin: 0 0.7%;
+        order: 1;
+        align-items: flex-start;
+    }
+
+    .flex2 {
+        width: 66%;
+        flex: 0 1 100%;
+        margin: 0 0.72%;
+        order: -1;
+        align-items: flex-end;
+    }
+
+    .flex3 {
+        width: 29%;
+        flex: 0 1 50%;
+        margin: 0 0.79%;
+        align-items: flex-start;
+    }
+
+    .ratio {
+        padding-top: 118.9%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        padding: 15px 5px;
+    }
+
+    .wrap {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+
+        position: inherit;
+        width: auto;
+        height: auto;
+    }
+
+    .flex1, .flex3 {
+        flex: 0 1 460px;
+        margin: 0 5px;
+    }
+
+    .flex1 {
+        order: 0;
+    }
+
+    .flex2 {
+        flex: 0 1 460px;
+        margin: 5px;
+    }
+
+    .proportion {
+        position: inherit;
+    }
+
+    .ratio {
+        display: none;
+    }
+}

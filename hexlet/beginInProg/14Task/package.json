@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.js?(x)"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
+}

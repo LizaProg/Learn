@@ -1,0 +1,119 @@
+@import "project.less";
+
+.a{
+    color: @color_red;
+
+    &:hover{
+        color: lighten(@color_red, 10%);
+    }
+
+    .c{
+        color: @color_green;
+        font-size: @h1_size - @h2_size;
+    }
+}
+
+.block {
+    width: 25%;
+
+    @media screen and (max-width: 600px){
+        width: 20%;
+    }
+ 
+    &__title {
+        color: red;
+    }
+
+    &__subtitle {
+        color: green;
+
+        &-some {
+            color: green;
+
+            @media screen and (max-width: 600px){
+                color: red;
+            }
+        }
+    }
+}
+
+.nz{
+    @xw: 400px;
+    @xm: 15px;
+    @yw: 200px;
+
+    .x{
+        width: @xw;
+        margin: @xm;
+    }
+
+    .y{
+        width: @yw;
+    }
+
+    @media screen and (max-width: (@xw + @yw + 2 * @xm)){
+        .x, .y{
+            width: 100%;
+        }
+    }
+}
+
+.ab{
+    @xw: 100px;
+    width: @xw;
+    background: url(~"@{path_img}/1.jpg");
+    .btn();
+    .flex();
+}
+
+.item{
+    margin: 15px;
+    width: calc(~"25% - 30px");
+    background: url(~"@{path_img}/1.jpg");
+    .btn();
+}
+
+.btn(){
+    display: inline-block;
+    padding: 20px;
+    
+    &:hover{
+        box-shadow: 5px 5px 2px #222 inset;
+    }
+}
+
+.flex(){
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col(){
+    margin-left: @offset_one_side;
+    margin-right: @offset_one_side;
+}
+
+.size(@n){
+    @w: 100% / @columns * @n;
+    width: calc(~"@{w} - @{offset}");
+}
+
+.a{
+    .col();
+    .size(6);
+}
+
+.b{
+    .size(3);
+}
+
+.c{
+    .size(1);
+
+    .mw600(color, red);
+}
+
+.mw600(@name, @value){
+    @media screen and (max-width: 600px){
+        @{name}: @value;
+    }
+}

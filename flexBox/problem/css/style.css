@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper{
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+.row{
+    border: 1px solid #ff0;
+    /*margin:0 -15px;*/
+}
+
+.profit{
+    background: #232324;
+    padding: 15px 0;
+}
+
+.profit .item-pair{
+    flex-basis: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profit .row{
+    display: flex;
+    /*нужно для адаптивки*/
+    flex-wrap: wrap;
+
+    justify-content: center;
+    /*justify-content: space-around;*/
+    /*justify-content: space-between;*/
+}
+
+.profit .item{
+    text-align: center;
+    flex-basis: 250px;
+    /*flex-basis: 300px; ВМЕСТО max-width: 300px;*/
+    margin: 15px;
+    border: 1px solid pink;
+
+}
+
+.profit .item .subtitle{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 3px 0;
+}
+
+.profit .item .text{
+    color: #d94948;
+}
+

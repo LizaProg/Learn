@@ -1,0 +1,22 @@
+{
+  "name": "gulp-tutor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-if": "^2.0.2"
+  },
+  "devDependencies": {
+    "gulp-stylus": "^2.6.0",
+    "stylus": "^0.54.5"
+  }
+}

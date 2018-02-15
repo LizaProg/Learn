@@ -1,0 +1,14 @@
+.header {
+  background: url("/img/kiwi.png") left center no-repeat;
+  background-size: contain;
+  padding-left: 50px;
+  font-size: 42px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlYWRlci5zdHlsIiwibWFpbi5zdHlsIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBNEIsMkNBQTVCO0VBQ0EsaUJBQWdCLFFBQWhCO0VBQ0EsY0FBYSxLQUFiO0VBQ0EsV0FBVSxLQUFWOztBQ0ZGO0VBQ0UsUUFBTyxFQUFQO0VBQ0EsU0FBUSxFQUFSO0VBQ0EsT0FBTSxLQUFOO0VBQ0EsUUFBTyxLQUFQIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlclxuICBiYWNrZ3JvdW5kIHVybCgvaW1nL2tpd2kucG5nKWxlZnQgY2VudGVyIG5vLXJlcGVhdFxuICBiYWNrZ3JvdW5kLXNpemUgY29udGFpblxuICBwYWRkaW5nLWxlZnQgNTBweFxuICBmb250LXNpemUgNDJweCIsIkBpbXBvcnQgXCIuL2hlYWRlclwiXG5cbmJvZHlcbiAgbWFyZ2luIDBcbiAgcGFkZGluZyAwXG4gIHdpZHRoIDEwMCVcbiAgaGVpZ2h0IDEwMCUiXX0= */

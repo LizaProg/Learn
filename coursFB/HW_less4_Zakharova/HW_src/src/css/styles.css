@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section.profit {
+  background: #232324;
+  padding: 15px 0;
+}
+
+section.profit .item {
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid #fff;
+  text-align: center;
+  background: #fff;
+  justify-content: space-around;
+  flex-basis: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 10px;
+}
+
+section.profit .item .text {
+  text-align: left;
+  font-style: italic;
+  flex-basis: 290px;
+  flex-grow: 3;
+  flex-shrink: 1;
+}
+
+section.profit .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 960px;
+  height: 100%;
+  padding: 0 5px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+section.profit .wrap img {
+  max-width: 100%;
+}
+
+section.profit .img {
+  flex-basis: 100px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 861px) {
+  section.profit .item:nth-child(2n+1) {
+    flex-direction: row-reverse;
+  }
+}

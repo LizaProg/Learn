@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    background: #fec654;
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.item1, .item2{
+    background: #1777fe;
+    width: auto;
+    height: auto;
+    flex: 1 1 300px;
+    margin: 5px;
+}
+
+/**/
+
+.wrapper1{
+    background: #fec654;
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+
+
+}
+
+.item1-1, .item2-1, .item3-1, .item4-1{
+    background: #1777fe;
+    width: auto;
+    height: auto;
+    flex: 1 1 300px;
+    margin: 5px;
+}
