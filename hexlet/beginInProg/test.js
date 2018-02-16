@@ -261,39 +261,6 @@ const addDigits = (num) => {
 /*
 console.log(addDigits(148));*/
 
-/*наименьшее число в массиве*/
-
-const minDigit = (arr) => {
-    let res = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] < res) {
-            res = arr[i]
-        }
-    }
-    return res;
-};
-
-//console.log(minDigit([1, 2, 4, 0, 10, -3, -15]));
-
-
-/*наибольшее число в массиве*/
-
-const maxNum = (arr) => {
-    let res = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        let orderNum = arr[i];
-        if (res < orderNum) {
-            res = orderNum;
-
-        }
-    }
-    //console.log(orderNum + ' it is serial number of the maximum number');
-    return res;
-};
-
-//console.log(maxNum([18, -3, 0, 23, 90, 9, -100.4, 90.1, 'lol']));
-
-
 //18
 
 const upperFirstLetter = (str) => {
