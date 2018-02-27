@@ -142,15 +142,13 @@ console.log(isCorrectPassword('qwerty')); // => true
 const savePassword = password => passwordForCheck => password === passwordForCheck;
 
 
+const sum = (a, b) => c => a + b + c;
 
-
-
-
-
-
-
-
-
+const sum = (a, b) => {
+  return (c) => {
+    return a + b + c;
+  }
+};
 
 
 
@@ -173,4 +171,11 @@ const getIncreasedBySevenTimes = getIncreasedNumFunction(7);
 // 4 * 7 === 28
 getIncreasedBySevenTimes(4);
 
+
+
+//частичное применение
+
+const sum = (a, b) => a + b;
+const plusTwo = (a) => sum(a, 2);
+plusTwo(3); //5
 

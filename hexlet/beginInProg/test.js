@@ -134,25 +134,23 @@ const reverse = (str) => {
 // Она принимает число и возвращает true, если число является простым, и false в ином случае.
 
 const isPrime = (num) => {
-    if ((num % 2 === 0) && (num !== 2)) {
-        return false
+    if (num < 2) {
+        return false;
     }
-    else if (num === 2) {
-        return true
-    }
-    else if (num === 1) {
-        return false
-    }
-    for (let i = 3; i <= num; i += 2) {
-        if (num % i !== 0) {
-            return true
-        } else {
-            return false
+    let numIsPrime = true;
+    for (let i = 2; i <= (num / 2); i++) {
+        if (num % i === 0) {
+            numIsPrime = false;
+            break;
         }
     }
+    return numIsPrime;
 };
 
-//console.log(isPrime(1));
+/*console.log(isPrime(1));
+console.log(isPrime(10));
+console.log(isPrime(7));
+console.log(isPrime(-3));*/
 
 
 /*13*/
@@ -246,20 +244,18 @@ console.log(compare('Google', 'Rambler'));*/
 
 /*17*/
 
-const addDigits = (num) => {
-    let strNum = num.toString();
-    let sp = strNum.split('');
+const sumPartNum = (num) => {
+    let numPart = num.toString().split('');
     let res = 0;
-    for (let i = 0; i < sp.length; i++) {
-        let toNum = parseInt(sp[i]);
-        res += toNum;
+    for (let i = 0; i < numPart.length; i++) {
+        res += Number(numPart[i]);
     }
-    return res;
+    if(res >= 10){
+        return sumPartNum(res)
+    }else {
+        return res;
+    }
 };
-
-
-/*
-console.log(addDigits(148));*/
 
 //18
 
@@ -275,7 +271,6 @@ const upperEveryWord = (str) => {
     return strSplit.join(' ');
 };
 
-//console.log(upperEveryWord('ghbd dkj slejl '));
-
-//console.log(upperFirstLetter('k.ms slkmx'));
-//console.log(upperEveryWord('cd k,dsc lkdjck dsmc'));
+/*console.log(upperEveryWord('ghbd dkj slejl '));
+console.log(upperFirstLetter('k.ms slkmx'));
+console.log(upperEveryWord('cd k,dsc lkdjck dsmc'));*/

@@ -1,5 +1,9 @@
-const smallestDivisior = (num) => {
-    // Find firs divisor.
+const smallestDivisor = (num) => {
+    if (num === 1) {
+        return 1;
+    }
+
+    // Find first divisor.
     let firstCandidate = parseInt(num / 2);
     while (num % firstCandidate !== 0) {
         firstCandidate = firstCandidate - 1;
@@ -13,9 +17,9 @@ const smallestDivisior = (num) => {
         let secondCandidate = num / firstCandidate;
         let minCandidate = Math.min(firstCandidate, secondCandidate);
 
-        return smallestDivisior(minCandidate);
+        return smallestDivisor(minCandidate);
     }
 };
 
-console.log(smallestDivisior(10));
+console.log(smallestDivisor(1));
 

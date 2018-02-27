@@ -138,13 +138,205 @@ const reverse = (str) => {
 //     return iter(0, '');
 // };
 
-let a = "Hello";
-let b = " JOPA";
-let c = 56 ** 2;
 
-let d = `${a}${b}${c}`;
+//частичное применение
 
-console.log(d);
+/*const partialApply = (func, arg1) => {
+    return function (x) {
+        return func(arg1, x);
+    }
+};
 
-console.log(reverse('abc'));
+let f1 = partialApply(pow, 2);
+console.log(f1(4));*/
+
+// let fu = partialApply(pow, 2);
+// console.log(fu(2));
+
+//teacher
+//export default (f, a) => b => f(a, b);
+
+
+//FLIP
+/*У нас есть функция flip в которую будем передавать какую-то функцию,
+функция flip возвращает нам другую функцию
+в которую мы передаем аргументы
+и возвращаем аргументы функции в обратном порядке*/
+const sub = (a, b) => a - b;
+
+const flip = (func) => {
+    return (a, b) => {
+        return func(b, a)
+    }
+};
+
+const reverseSub = flip(sub);
+/*console.log(sub(6, 5));
+console.log(reverseSub(6, 5));*/
+
+//teacher
+//export default f => (a, b) => f(b, a);
+
+
+//каррирование
+//п1
+const greeting = () => () => () => () => console.log('Hey!');
+greeting()()()();
+//Суммарное количество функций считается очень легко, оно равно сумме всех стрелок =>
+
+//п2
+//const sum = (a, b, c) => a + b + c;
+
+// const sum = (a, b, c) => a + b + c;
+
+const sum21 = a => b => c => a + b + c;
+console.log(sum21(5)(10)(-2));
+
+//Тоже самое разложенное по функциям:
+const sum22 = (a) => {
+    return (b) => {
+        return (c) => {
+            return a + b + c;
+        };
+    };
+};
+
+// const onePlus2Args = sum22(1);
+// const onePlusTwoPlus1Arg = onePlus2Args(2);
+// const onePlusTwoPlusThree = onePlusTwoPlus1Arg(3);
+//
+// console.log(onePlusTwoPlus1Arg);
+// console.log(onePlusTwoPlusThree);
+
+console.log(sum22(1)(2)(3));
+
+
+// //п3
+// const sum = a => b => c => a + b + c;
+// /*const sum1 = sum(10); // sum1 = b => c => 10 + b + c
+// const sum2 = sum1(3); // sum2 = c => 10 + 3 + c
+// const result = sum2(0); // result = 10 + 3 + 0
+// console.log(result); // 13*/
+//
+// //Тоже самое происходит и при таком вызове:
+// console.log(sum(10)(3)(0) + '!');
+// //разница только в том что вызовы происходят без создания промежуточных констант.
+//
+//
+// //
+// const getAverageSalary = job => country =>{
+//     let workingDays = 0;
+//     let rateADay = 0;
+//     if (country === 'spain' && job === 'programmer') {
+//         workingDays = 245;
+//         rateADay = 500;
+//         return workingDays * rateADay;
+//     }
+//     if (country === 'russia' && job === 'programmer') {
+//         workingDays = 247;
+//         rateADay = 600;
+//         return workingDays * rateADay;
+//     }
+//     if (country === 'usa' && job === 'programmer') {
+//         workingDays = 250;
+//         rateADay = 700;
+//         return workingDays * rateADay;
+//     }
+// };
+//
+// //const salary1 = getAverageSalary('programmer')('spain');
+// const getProgrammersSalaryByCountry = getAverageSalary('programmer');
+//
+// const salary1 = getProgrammersSalaryByCountry('spain');
+// const salary2 = getProgrammersSalaryByCountry('russia');
+// const salary3 = getProgrammersSalaryByCountry('usa');
+//
+// console.log(salary1);
+// console.log(salary2);
+// console.log(salary3);
+//
+//
+const sumT = a => b => c => b - a - c;
+console.log(sumT(10)(7)(1));
+/*
+Выберите корректный результат вызова функции.
+-4*/
+
+
+/*
+const concatThree = (a, b, c) => `${a} ${b} ${c} nash kurator Dzhigurda!`;
+
+const carryConcatThree = (a) => {
+    return (b) => {
+        return (c) => {
+            return concatThree(a, b, c);
+        }
+    }
+};
+
+
+console.log(carryConcatThree('1')('2')('3'));
+*/
+
+
+const If = c => c;
+const True = a => () => a;
+const False = () => b => b;
+
+// const True = (a) => {
+//     return function (b) {
+//         return a;
+//     }
+// };
+
+// const False = function (a) {
+//     return function (b) {
+//         return b;
+//     }
+// };
+
+// const False = (a) => {
+//     return function (b) {
+//         return b;
+//     }
+// };
+//
+// console.log(True('a')('b'));
+// console.log(False('1')('2'));
+
+console.log(If(True)('one')('two'));
+console.log(If(False)('one')('two'));
+
+// console.log(If(True, 'one', 'two'));
+// console.log(If(False, 'one', 'two'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
