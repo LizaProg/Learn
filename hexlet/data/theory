@@ -1,0 +1,23 @@
+Создадим несколько точек:
+
+const point1 = makePoint(25, -50);
+const point2 = makePoint(-70, 35);
+const newPoint = makePoint(getY(point1) + 10, -getX(point2));
+Выберите вариант, который это выражение выведет на экран:
+
+console.log(`(${getY(newPoint)}, ${getX(newPoint)})`)
+
+(70, -40)
+
+
+
+const point1 = makePoint(5, 15);
+const point2 = makePoint(10, 20);
+const newPoint = makePoint(getY(point1) + 8, -getX(point2));
+Чему равны координаты newPoint?
+
+// подставьте значение координаты 'х' точки newPoint
+getX(newPoint) === 23;
+
+// подставьте значение координаты 'y' точки newPoint
+getY(newPoint) === -10;
