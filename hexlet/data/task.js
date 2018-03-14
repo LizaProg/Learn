@@ -46,11 +46,7 @@ const quadrant = () => {
 
 
 const symmetricalPoint = () => {
-    let x = getX(-5, 5);
-    //console.log('x = ' + x);
-    let y = getY(-5, 5);
-    //console.log('y = ' + y);
-    //return (-x, -y);
+
 };
 
 console.log(symmetricalPoint());
